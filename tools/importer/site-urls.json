@@ -1,0 +1,399 @@
+{
+  "originUrl": "https://www.valvolineglobal.com",
+  "aborted": false,
+  "lastCrawled": "https://www.valvolineglobal.com/en/",
+  "urls": [
+    {
+      "url": "https://www.valvolineglobal.com/ar-ksa/",
+      "source": "CRAWL",
+      "targetPath": "/ar-ksa",
+      "id": "c2cf002b4bb1d2cf3f6753ffccd981303a60f146"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/ar-ksa/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/ar-ksa/hpc-liquid-cooling",
+      "id": "86f010059fd884c2b771d9d27823c678d859862e"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/de-de/",
+      "source": "CRAWL",
+      "targetPath": "/de-de",
+      "id": "cbd72cba8084ea1dba329795a663835bab2d83d5"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/de-de/hpc-fl_43ssigkeitsk_41hlung/",
+      "source": "CRAWL",
+      "targetPath": "/de-de/hpc-fl-43ssigkeitsk-41hlung",
+      "id": "67fd12d51749e5564f908e6297414069a48f85a3"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-asia/",
+      "source": "CRAWL",
+      "targetPath": "/en-asia",
+      "id": "e3a076406f4119583bd29a4e757a8ffb6bdaf869"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-asia/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-asia/hpc-liquid-cooling",
+      "id": "4eae480a6cff4a667c9288062cdb896a3fe81a4a"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-au/",
+      "source": "CRAWL",
+      "targetPath": "/en-au",
+      "id": "4371e0fd2eb24ce6d47adb5d8f74928b95ad55ce"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-au/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-au/hpc-liquid-cooling",
+      "id": "58ed8bc94f03e657392ae315505cd0bfa4e29804"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-ca/",
+      "source": "CRAWL",
+      "targetPath": "/en-ca",
+      "id": "2deb56214e5d5e4048ff218fae4d5b1b6c34ea80"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-ca/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-ca/hpc-liquid-cooling",
+      "id": "551a193281fbf70ed29c89a2411bbd55069e6518"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-eur/",
+      "source": "CRAWL",
+      "targetPath": "/en-eur",
+      "id": "0f0d7cf207b7454367fecdd8123622bb716740b9"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-eur/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-eur/hpc-liquid-cooling",
+      "id": "b9c0e42939777b6e5652d95b1ef3b789d8612877"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-in/",
+      "source": "CRAWL",
+      "targetPath": "/en-in",
+      "id": "7a0ab2b86b638ceeeb11a39b921dce7dcea204a3"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-in/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-in/hpc-liquid-cooling",
+      "id": "1937fdca6059897d13ff0ee092bb08cdb21b4274"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-ksa/",
+      "source": "CRAWL",
+      "targetPath": "/en-ksa",
+      "id": "2397c29b4caf528d091dd12c4465631d13c87144"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-ksa/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-ksa/hpc-liquid-cooling",
+      "id": "8773b57f8f78c7af152199c3e1fcc7593d8bf88a"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-la/",
+      "source": "CRAWL",
+      "targetPath": "/en-la",
+      "id": "ffa33e90d301c227bb627c524142cf2d4ce01d1a"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-la/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-la/hpc-liquid-cooling",
+      "id": "b666d3acce2d326796d49d94d18480adfd1abc72"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-mea/",
+      "source": "CRAWL",
+      "targetPath": "/en-mea",
+      "id": "461ee09556d812f5003ed7a358ccd4128ec65694"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-mea/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-mea/hpc-liquid-cooling",
+      "id": "aaf873b9f31abc8f4600232d833effc826a3c3ce"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-nz/",
+      "source": "CRAWL",
+      "targetPath": "/en-nz",
+      "id": "0ef59c64c877880c01573d57bd8f6fd3f62baa30"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-nz/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-nz/hpc-liquid-cooling",
+      "id": "4d31bbcc7d2eb085af7dcc74e52c4a7eb2ef3ccd"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-th/",
+      "source": "CRAWL",
+      "targetPath": "/en-th",
+      "id": "f8821f0bfc26ca8eed2f9a7d366ebbba95239afe"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en-th/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en-th/hpc-liquid-cooling",
+      "id": "46abdfde8b65bcffdf354a7aee45b90878ddbd22"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en/",
+      "source": "CRAWL",
+      "targetPath": "/en",
+      "id": "7d81b770ac2eeb55615ef153b1fd7a12e609edb8"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en/about-us/worldwide-regions/",
+      "source": "CRAWL",
+      "targetPath": "/en/about-us/worldwide-regions",
+      "id": "5194f9be4b5263b250bb910f16a7859e080c8c84"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/en/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/en/hpc-liquid-cooling",
+      "id": "f9851fae71775c0b298d1657e1dc10f2abc65477"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ar/",
+      "source": "CRAWL",
+      "targetPath": "/es-ar",
+      "id": "09eb1f8ee1264d885044adcb098143c190aaf07d"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ar/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-ar/hpc-liquid-cooling",
+      "id": "6cddb9497fe135ef691dc45dabc4d231eb10781e"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-cl/",
+      "source": "CRAWL",
+      "targetPath": "/es-cl",
+      "id": "dd4f4f7f0f170b0307ccacd2a59834121c99aa48"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-co/",
+      "source": "CRAWL",
+      "targetPath": "/es-co",
+      "id": "2775cf57106a391e493fbe43e7ae2b368e0b5ad4"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-co/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-co/hpc-liquid-cooling",
+      "id": "fa9a599333ac99faf42fa676dd010aa8dc1611d3"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ec/",
+      "source": "CRAWL",
+      "targetPath": "/es-ec",
+      "id": "e768f447743f539e79af759da03f7e78c8bea1a2"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ec/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-ec/hpc-liquid-cooling",
+      "id": "2c631cfffa7555b9d59d7ba7ada8784166ba9855"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-es/",
+      "source": "CRAWL",
+      "targetPath": "/es-es",
+      "id": "dafae7d7edb94fa6d4544e60ef9bbac1c120ab76"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-es/refrigeracion-liquida-hpc/",
+      "source": "CRAWL",
+      "targetPath": "/es-es/refrigeracion-liquida-hpc",
+      "id": "1ffe03896c28b831e60c847a3dcf90e9af21d628"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-la/",
+      "source": "CRAWL",
+      "targetPath": "/es-la",
+      "id": "332f35ec86d9164f6cc4a438c80a78f86f357fd1"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-la/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-la/hpc-liquid-cooling",
+      "id": "fbb986c44dcd40c8f4b66107800006f46a8cbcb4"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-pe/",
+      "source": "CRAWL",
+      "targetPath": "/es-pe",
+      "id": "b0e722459049989434317f7b9e96c8973817fd8e"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-pe/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-pe/hpc-liquid-cooling",
+      "id": "f55d0ec784e05a1cb25077cc8dd1c94145d0eb4b"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ve/",
+      "source": "CRAWL",
+      "targetPath": "/es-ve",
+      "id": "86985be2173700a093b2128f0d06da86ad148d88"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/es-ve/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/es-ve/hpc-liquid-cooling",
+      "id": "b5a0487e7ddb5385384c0f5c548787198d807b61"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/fr-ca/",
+      "source": "CRAWL",
+      "targetPath": "/fr-ca",
+      "id": "b161f8fe1b13ded90324e5914951b9e36d509b5b"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/fr-ca/hpc-refroidissement-liquide/",
+      "source": "CRAWL",
+      "targetPath": "/fr-ca/hpc-refroidissement-liquide",
+      "id": "98a93bd998fb4755a63b9fcd39a010d03d70a44e"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/fr-fr/",
+      "source": "CRAWL",
+      "targetPath": "/fr-fr",
+      "id": "c46f555a55630b2fe0b82b3aabe76bd4cfedc4cb"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/fr-fr/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/fr-fr/hpc-liquid-cooling",
+      "id": "89b13192b5b40d5d52e4a79111df4dd5e5436dbb"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/it-it/",
+      "source": "CRAWL",
+      "targetPath": "/it-it",
+      "id": "a7ca1a87a30b16db9cf2c2fc18f8ca66a6b984be"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/it-it/raffreddamento-a-liquido-hpc/",
+      "source": "CRAWL",
+      "targetPath": "/it-it/raffreddamento-a-liquido-hpc",
+      "id": "154f256d6098d3a08fa26654912965d1a137bef6"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/pl-pl/",
+      "source": "CRAWL",
+      "targetPath": "/pl-pl",
+      "id": "7bf2ffccfd7c3942243c9027ad1a60987be551f4"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/pl-pl/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/pl-pl/hpc-liquid-cooling",
+      "id": "7d9e496f9d2a7045293f0f37607792edb5e993ed"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/ru-ru/",
+      "source": "CRAWL",
+      "targetPath": "/ru-ru",
+      "id": "c4d378ee3abcb2444bce05a118c383d3899acdd3"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/ru-ru/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/ru-ru/hpc-liquid-cooling",
+      "id": "0b5d7af322797971cbf6850bbff841c41f2e9007"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/sr-rs/",
+      "source": "CRAWL",
+      "targetPath": "/sr-rs",
+      "id": "05ed920cd4d019d391f2dca82706a9639809992b"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/sr-rs/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/sr-rs/hpc-liquid-cooling",
+      "id": "f1ea7284c2708943687feaef173c499e5b3feae5"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/th-th/",
+      "source": "CRAWL",
+      "targetPath": "/th-th",
+      "id": "2ebd5a05f3494e6addf426885891e3e12282cace"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/th-th/hpc-liquid-cooling/",
+      "source": "CRAWL",
+      "targetPath": "/th-th/hpc-liquid-cooling",
+      "id": "3be2da095bfdf3cf304614acd109a08bbd0aecff"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/tr-tr/",
+      "source": "CRAWL",
+      "targetPath": "/tr-tr",
+      "id": "e98cfab7d95554910784ecce668acadbb2e94d17"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/tr-tr/hpc-s_69v_85-so_51utma/",
+      "source": "CRAWL",
+      "targetPath": "/tr-tr/hpc-s-69v-85-so-51utma",
+      "id": "ee24851c3262613378ab6d0999530df71d3a5b20"
+    }
+  ],
+  "crawlOptions": {
+    "timeout": 64800000,
+    "inclusionPatterns": [],
+    "exclusionPatterns": [],
+    "limit": 100,
+    "sameDomain": true,
+    "keepHash": false,
+    "strategy": "crawl",
+    "logger": {},
+    "strategiesAttempted": [
+      "SITEMAPS",
+      "CRAWL"
+    ]
+  },
+  "extractionErrors": [
+    {
+      "url": "https://www.valvolineglobal.com/",
+      "status": "302 Found Redirect: https://www.valvolineglobal.com/en/"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/site.webmanifest",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/PassionOne-Regular.woff2",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/PassionOne-Bold.woff2",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Regular.woff2",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Bold.woff2",
+      "status": "content type is not text/html"
+    },
+    {
+      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Medium.woff2",
+      "status": "content type is not text/html"
+    }
+  ]
+}
