@@ -1,355 +1,613 @@
 {
-  "originUrl": "https://www.valvolineglobal.com",
+  "originUrl": "https://www.russellreynolds.com",
   "aborted": false,
-  "lastCrawled": "https://www.valvolineglobal.com/en/",
+  "lastCrawled": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
   "urls": [
     {
-      "url": "https://www.valvolineglobal.com/ar-ksa/",
-      "source": "CRAWL",
-      "targetPath": "/ar-ksa",
-      "id": "c2cf002b4bb1d2cf3f6753ffccd981303a60f146"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/ar-ksa/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/ar-ksa/hpc-liquid-cooling",
-      "id": "86f010059fd884c2b771d9d27823c678d859862e"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/de-de/",
-      "source": "CRAWL",
-      "targetPath": "/de-de",
-      "id": "cbd72cba8084ea1dba329795a663835bab2d83d5"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/de-de/hpc-fl_43ssigkeitsk_41hlung/",
-      "source": "CRAWL",
-      "targetPath": "/de-de/hpc-fl-43ssigkeitsk-41hlung",
-      "id": "67fd12d51749e5564f908e6297414069a48f85a3"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-asia/",
-      "source": "CRAWL",
-      "targetPath": "/en-asia",
-      "id": "e3a076406f4119583bd29a4e757a8ffb6bdaf869"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-asia/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-asia/hpc-liquid-cooling",
-      "id": "4eae480a6cff4a667c9288062cdb896a3fe81a4a"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-au/",
-      "source": "CRAWL",
-      "targetPath": "/en-au",
-      "id": "4371e0fd2eb24ce6d47adb5d8f74928b95ad55ce"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-au/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-au/hpc-liquid-cooling",
-      "id": "58ed8bc94f03e657392ae315505cd0bfa4e29804"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-ca/",
-      "source": "CRAWL",
-      "targetPath": "/en-ca",
-      "id": "2deb56214e5d5e4048ff218fae4d5b1b6c34ea80"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-ca/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-ca/hpc-liquid-cooling",
-      "id": "551a193281fbf70ed29c89a2411bbd55069e6518"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-eur/",
-      "source": "CRAWL",
-      "targetPath": "/en-eur",
-      "id": "0f0d7cf207b7454367fecdd8123622bb716740b9"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-eur/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-eur/hpc-liquid-cooling",
-      "id": "b9c0e42939777b6e5652d95b1ef3b789d8612877"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-in/",
-      "source": "CRAWL",
-      "targetPath": "/en-in",
-      "id": "7a0ab2b86b638ceeeb11a39b921dce7dcea204a3"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-in/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-in/hpc-liquid-cooling",
-      "id": "1937fdca6059897d13ff0ee092bb08cdb21b4274"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-ksa/",
-      "source": "CRAWL",
-      "targetPath": "/en-ksa",
-      "id": "2397c29b4caf528d091dd12c4465631d13c87144"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-ksa/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-ksa/hpc-liquid-cooling",
-      "id": "8773b57f8f78c7af152199c3e1fcc7593d8bf88a"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-la/",
-      "source": "CRAWL",
-      "targetPath": "/en-la",
-      "id": "ffa33e90d301c227bb627c524142cf2d4ce01d1a"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-la/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-la/hpc-liquid-cooling",
-      "id": "b666d3acce2d326796d49d94d18480adfd1abc72"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-mea/",
-      "source": "CRAWL",
-      "targetPath": "/en-mea",
-      "id": "461ee09556d812f5003ed7a358ccd4128ec65694"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-mea/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-mea/hpc-liquid-cooling",
-      "id": "aaf873b9f31abc8f4600232d833effc826a3c3ce"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-nz/",
-      "source": "CRAWL",
-      "targetPath": "/en-nz",
-      "id": "0ef59c64c877880c01573d57bd8f6fd3f62baa30"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-nz/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-nz/hpc-liquid-cooling",
-      "id": "4d31bbcc7d2eb085af7dcc74e52c4a7eb2ef3ccd"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-th/",
-      "source": "CRAWL",
-      "targetPath": "/en-th",
-      "id": "f8821f0bfc26ca8eed2f9a7d366ebbba95239afe"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en-th/hpc-liquid-cooling/",
-      "source": "CRAWL",
-      "targetPath": "/en-th/hpc-liquid-cooling",
-      "id": "46abdfde8b65bcffdf354a7aee45b90878ddbd22"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/en/",
+      "url": "https://www.russellreynolds.com/en/",
       "source": "CRAWL",
       "targetPath": "/en",
-      "id": "7d81b770ac2eeb55615ef153b1fd7a12e609edb8"
+      "id": "140b91a74b7ce6366bfdea4297b260c18d02bea3"
     },
     {
-      "url": "https://www.valvolineglobal.com/en/about-us/worldwide-regions/",
+      "url": "https://www.russellreynolds.com/en/about/careers",
       "source": "CRAWL",
-      "targetPath": "/en/about-us/worldwide-regions",
-      "id": "5194f9be4b5263b250bb910f16a7859e080c8c84"
+      "targetPath": "/en/about/careers",
+      "id": "4c1969a601fb66ecfc10aa25fffac85d74f50735"
     },
     {
-      "url": "https://www.valvolineglobal.com/en/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/about/careers/careers-at-rra",
       "source": "CRAWL",
-      "targetPath": "/en/hpc-liquid-cooling",
-      "id": "f9851fae71775c0b298d1657e1dc10f2abc65477"
+      "targetPath": "/en/about/careers/careers-at-rra",
+      "id": "868ffc267b9ac5e990cf435241ee8388148a0f73"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ar/",
+      "url": "https://www.russellreynolds.com/en/about/careers/careers-with-our-clients",
       "source": "CRAWL",
-      "targetPath": "/es-ar",
-      "id": "09eb1f8ee1264d885044adcb098143c190aaf07d"
+      "targetPath": "/en/about/careers/careers-with-our-clients",
+      "id": "a6665d7ff18a6da1c0d274a038472229f030bba8"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ar/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/about/newsroom",
       "source": "CRAWL",
-      "targetPath": "/es-ar/hpc-liquid-cooling",
-      "id": "6cddb9497fe135ef691dc45dabc4d231eb10781e"
+      "targetPath": "/en/about/newsroom",
+      "id": "f9b24416de6ced79f0bcb84712bbe82f8f4f3515"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-cl/",
+      "url": "https://www.russellreynolds.com/en/about/who-we-are",
       "source": "CRAWL",
-      "targetPath": "/es-cl",
-      "id": "dd4f4f7f0f170b0307ccacd2a59834121c99aa48"
+      "targetPath": "/en/about/who-we-are",
+      "id": "dbadd9575b845430468db52b6c89d37e698e80f8"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-co/",
+      "url": "https://www.russellreynolds.com/en/about/who-we-are/history",
       "source": "CRAWL",
-      "targetPath": "/es-co",
-      "id": "2775cf57106a391e493fbe43e7ae2b368e0b5ad4"
+      "targetPath": "/en/about/who-we-are/history",
+      "id": "3ef7a667bb2b9be01d495be810823b7d67605ecf"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-co/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/about/who-we-are/partnerships",
       "source": "CRAWL",
-      "targetPath": "/es-co/hpc-liquid-cooling",
-      "id": "fa9a599333ac99faf42fa676dd010aa8dc1611d3"
+      "targetPath": "/en/about/who-we-are/partnerships",
+      "id": "8db5a33c694ad394adf812293e5c733e1ba5be61"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ec/",
+      "url": "https://www.russellreynolds.com/en/about/who-we-are/responsible-ai-principles",
       "source": "CRAWL",
-      "targetPath": "/es-ec",
-      "id": "e768f447743f539e79af759da03f7e78c8bea1a2"
+      "targetPath": "/en/about/who-we-are/responsible-ai-principles",
+      "id": "48ec87a5280bd82329789649cbfec01e4f368d88"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ec/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/about/who-we-are/sustainability",
       "source": "CRAWL",
-      "targetPath": "/es-ec/hpc-liquid-cooling",
-      "id": "2c631cfffa7555b9d59d7ba7ada8784166ba9855"
+      "targetPath": "/en/about/who-we-are/sustainability",
+      "id": "3b3ecd921974836716825f2247d8c3b1ac6ee521"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-es/",
+      "url": "https://www.russellreynolds.com/en/access-events",
       "source": "CRAWL",
-      "targetPath": "/es-es",
-      "id": "dafae7d7edb94fa6d4544e60ef9bbac1c120ab76"
+      "targetPath": "/en/access-events",
+      "id": "f5ed8fee58447ca931005570cd2d20a9d383ef32"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-es/refrigeracion-liquida-hpc/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation",
       "source": "CRAWL",
-      "targetPath": "/es-es/refrigeracion-liquida-hpc",
-      "id": "1ffe03896c28b831e60c847a3dcf90e9af21d628"
+      "targetPath": "/en/capabilities/how-can-i-lead-business-transformation",
+      "id": "901792e9f3ef1723c7a1669685afdf7e2a2fc5d9"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-la/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/artificial-intelligence-advisory",
       "source": "CRAWL",
-      "targetPath": "/es-la",
-      "id": "332f35ec86d9164f6cc4a438c80a78f86f357fd1"
+      "targetPath": "/en/capabilities/how-can-i-lead-business-transformation/artificial-intelligence-advisory",
+      "id": "78909f9dd993c5f5171083538159e56370b42244"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-la/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/inclusion-and-culture-advisory",
       "source": "CRAWL",
-      "targetPath": "/es-la/hpc-liquid-cooling",
-      "id": "fbb986c44dcd40c8f4b66107800006f46a8cbcb4"
+      "targetPath": "/en/capabilities/how-can-i-lead-business-transformation/inclusion-and-culture-advisory",
+      "id": "d88b9882646012ee60c012d1042321eb075436e6"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-pe/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/strategy-decode-and-activation",
       "source": "CRAWL",
-      "targetPath": "/es-pe",
-      "id": "b0e722459049989434317f7b9e96c8973817fd8e"
+      "targetPath": "/en/capabilities/how-can-i-lead-business-transformation/strategy-decode-and-activation",
+      "id": "8c6d6c5bdbbf23699aa4f2185c7b20633b1fcd91"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-pe/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/sustainability",
       "source": "CRAWL",
-      "targetPath": "/es-pe/hpc-liquid-cooling",
-      "id": "f55d0ec784e05a1cb25077cc8dd1c94145d0eb4b"
+      "targetPath": "/en/capabilities/how-can-i-lead-business-transformation/sustainability",
+      "id": "3e2894c28a30ca8d32138da97d0c7c2eff52dc81"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ve/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader",
       "source": "CRAWL",
-      "targetPath": "/es-ve",
-      "id": "86985be2173700a093b2128f0d06da86ad148d88"
+      "targetPath": "/en/capabilities/how-do-i-become-a-better-leader",
+      "id": "9ea0f0ec2b1b731a3a3560d0cbd2aa8fdfa06d3b"
     },
     {
-      "url": "https://www.valvolineglobal.com/es-ve/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
       "source": "CRAWL",
-      "targetPath": "/es-ve/hpc-liquid-cooling",
-      "id": "b5a0487e7ddb5385384c0f5c548787198d807b61"
+      "targetPath": "/en/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "id": "4a5ea5d9424364f44c840ad3b9506df36f865503"
     },
     {
-      "url": "https://www.valvolineglobal.com/fr-ca/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/rra-artemis",
       "source": "CRAWL",
-      "targetPath": "/fr-ca",
-      "id": "b161f8fe1b13ded90324e5914951b9e36d509b5b"
+      "targetPath": "/en/capabilities/how-do-i-become-a-better-leader/rra-artemis",
+      "id": "ce4c3cb02c7a3b2962209d3cf29879624010b9a6"
     },
     {
-      "url": "https://www.valvolineglobal.com/fr-ca/hpc-refroidissement-liquide/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams",
       "source": "CRAWL",
-      "targetPath": "/fr-ca/hpc-refroidissement-liquide",
-      "id": "98a93bd998fb4755a63b9fcd39a010d03d70a44e"
+      "targetPath": "/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams",
+      "id": "ce23a566cb307740be6436bd7bd193b1b75178d4"
     },
     {
-      "url": "https://www.valvolineglobal.com/fr-fr/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/assessment-benchmarking",
       "source": "CRAWL",
-      "targetPath": "/fr-fr",
-      "id": "c46f555a55630b2fe0b82b3aabe76bd4cfedc4cb"
+      "targetPath": "/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/assessment-benchmarking",
+      "id": "27f66faae5c03c69591e69922877f369e54c970c"
     },
     {
-      "url": "https://www.valvolineglobal.com/fr-fr/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/ceo-transitions",
       "source": "CRAWL",
-      "targetPath": "/fr-fr/hpc-liquid-cooling",
-      "id": "89b13192b5b40d5d52e4a79111df4dd5e5436dbb"
+      "targetPath": "/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/ceo-transitions",
+      "id": "97e1e81437845d951ef3164ffe8aed955a37fcee"
     },
     {
-      "url": "https://www.valvolineglobal.com/it-it/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/development-and-transition",
       "source": "CRAWL",
-      "targetPath": "/it-it",
-      "id": "a7ca1a87a30b16db9cf2c2fc18f8ca66a6b984be"
+      "targetPath": "/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/development-and-transition",
+      "id": "221b0bc49bcb4f6beccc879afc4c707b1e89dd34"
     },
     {
-      "url": "https://www.valvolineglobal.com/it-it/raffreddamento-a-liquido-hpc/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/team-effectiveness",
       "source": "CRAWL",
-      "targetPath": "/it-it/raffreddamento-a-liquido-hpc",
-      "id": "154f256d6098d3a08fa26654912965d1a137bef6"
+      "targetPath": "/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/team-effectiveness",
+      "id": "68c4717aad9e25196535dd00013ea20a6442413d"
     },
     {
-      "url": "https://www.valvolineglobal.com/pl-pl/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders",
       "source": "CRAWL",
-      "targetPath": "/pl-pl",
-      "id": "7bf2ffccfd7c3942243c9027ad1a60987be551f4"
+      "targetPath": "/en/capabilities/how-do-i-find-the-best-leaders",
+      "id": "79b6a15ab0d17dc828f5346ec008be458e0e3f20"
     },
     {
-      "url": "https://www.valvolineglobal.com/pl-pl/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/board-search",
       "source": "CRAWL",
-      "targetPath": "/pl-pl/hpc-liquid-cooling",
-      "id": "7d9e496f9d2a7045293f0f37607792edb5e993ed"
+      "targetPath": "/en/capabilities/how-do-i-find-the-best-leaders/board-search",
+      "id": "09fdb5f4ebb36ffbcb73da922af28349df328af8"
     },
     {
-      "url": "https://www.valvolineglobal.com/ru-ru/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/ceo-search",
       "source": "CRAWL",
-      "targetPath": "/ru-ru",
-      "id": "c4d378ee3abcb2444bce05a118c383d3899acdd3"
+      "targetPath": "/en/capabilities/how-do-i-find-the-best-leaders/ceo-search",
+      "id": "be07fec12be804a0d89db9718f3988cdfa176d8f"
     },
     {
-      "url": "https://www.valvolineglobal.com/ru-ru/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/executive-search",
       "source": "CRAWL",
-      "targetPath": "/ru-ru/hpc-liquid-cooling",
-      "id": "0b5d7af322797971cbf6850bbff841c41f2e9007"
+      "targetPath": "/en/capabilities/how-do-i-find-the-best-leaders/executive-search",
+      "id": "3fb48e4c959582eeefad58caa275793fc7b31598"
     },
     {
-      "url": "https://www.valvolineglobal.com/sr-rs/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession",
       "source": "CRAWL",
-      "targetPath": "/sr-rs",
-      "id": "05ed920cd4d019d391f2dca82706a9639809992b"
+      "targetPath": "/en/capabilities/how-do-i-plan-for-succession",
+      "id": "88685272264e9bf038153754055616e8870808bc"
     },
     {
-      "url": "https://www.valvolineglobal.com/sr-rs/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/board-succession",
       "source": "CRAWL",
-      "targetPath": "/sr-rs/hpc-liquid-cooling",
-      "id": "f1ea7284c2708943687feaef173c499e5b3feae5"
+      "targetPath": "/en/capabilities/how-do-i-plan-for-succession/board-succession",
+      "id": "620948be1d596bb5db173d36e7d6bb74067c8ba3"
     },
     {
-      "url": "https://www.valvolineglobal.com/th-th/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/c-suite-succession",
       "source": "CRAWL",
-      "targetPath": "/th-th",
-      "id": "2ebd5a05f3494e6addf426885891e3e12282cace"
+      "targetPath": "/en/capabilities/how-do-i-plan-for-succession/c-suite-succession",
+      "id": "290afd7139512a4c1c01a3df48d9aa27a352705a"
     },
     {
-      "url": "https://www.valvolineglobal.com/th-th/hpc-liquid-cooling/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/ceo-succession",
       "source": "CRAWL",
-      "targetPath": "/th-th/hpc-liquid-cooling",
-      "id": "3be2da095bfdf3cf304614acd109a08bbd0aecff"
+      "targetPath": "/en/capabilities/how-do-i-plan-for-succession/ceo-succession",
+      "id": "d28b76832b2e219aa8fad93dc2a6963c1d299614"
     },
     {
-      "url": "https://www.valvolineglobal.com/tr-tr/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success",
       "source": "CRAWL",
-      "targetPath": "/tr-tr",
-      "id": "e98cfab7d95554910784ecce668acadbb2e94d17"
+      "targetPath": "/en/capabilities/how-do-i-set-my-board-up-for-success",
+      "id": "dca213b3e2044c0d11d2c7714ef224c9ee4bed70"
     },
     {
-      "url": "https://www.valvolineglobal.com/tr-tr/hpc-s_69v_85-so_51utma/",
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success/board-composition",
       "source": "CRAWL",
-      "targetPath": "/tr-tr/hpc-s-69v-85-so-51utma",
-      "id": "ee24851c3262613378ab6d0999530df71d3a5b20"
+      "targetPath": "/en/capabilities/how-do-i-set-my-board-up-for-success/board-composition",
+      "id": "b2f1b9f4f087fea715ba6c645ec343adc6a9ce03"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success/board-effectiveness",
+      "source": "CRAWL",
+      "targetPath": "/en/capabilities/how-do-i-set-my-board-up-for-success/board-effectiveness",
+      "id": "58a6b6f8c80ff95f6bf47644bcd6818688cb37c4"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/contact-us",
+      "source": "CRAWL",
+      "targetPath": "/en/contact-us",
+      "id": "35282d8d266c8c27766cf4ce609020771e00a2e3"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions",
+      "id": "954549d7819d6095f85408379facd835a7855ae6"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/board-ceo-advisory",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/board-ceo-advisory",
+      "id": "64649eb343b72d1a6bc4f23a1d8ca9ea05c8263e"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/corporate-affairs-and-communications",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/corporate-affairs-and-communications",
+      "id": "0ae12336a4e86ac53c28c6a3aad10ebb6f58e362"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/customer-activation-and-growth",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/customer-activation-and-growth",
+      "id": "0fff7bc0419542d5b9e915040035f9a4c0dc1a88"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/finance",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/finance",
+      "id": "d5be0d5af0ff90bc197c97d85be09f329f6a1a74"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/human-resources",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/human-resources",
+      "id": "d68085fc5f54010b9bdf250c72c59e9229744a90"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/legal-risk-and-compliance",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/legal-risk-and-compliance",
+      "id": "3348c1916cb30060db4c11ae1756c0e0a681c674"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/operations-and-supply-chain",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/operations-and-supply-chain",
+      "id": "6dcb1a707c217456bc306c93051e0be38a8a140f"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/sustainability",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/sustainability",
+      "id": "64a88a0549ac2f2afafe099576b91d0390a1c5c9"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/functions/technology-data-and-digital",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/functions/technology-data-and-digital",
+      "id": "c3c75cb6e5abab21302f5ed5dcb3b58a63eefd93"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries",
+      "id": "7f3648148c716c88f6b3a3360a42683f25202150"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/business-professional-services",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/business-professional-services",
+      "id": "20f6ebe198b408c557d4f1a37ac861632331739b"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/consumer",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/consumer",
+      "id": "c0d84b9e614273e17d71ce094e5c3e84ddf4bd16"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/education",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/education",
+      "id": "1e3250482cbe1a8648418b54946c304a077a1bc5"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/financial-services",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/financial-services",
+      "id": "99ea2c2bfefe11deea6d9c27dd7668de48beb5c0"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/healthcare",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/healthcare",
+      "id": "1d0c8827b4ece31af26a503362f9690e3b425b8e"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/industrial-and-natural-resources",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/industrial-and-natural-resources",
+      "id": "424a327f9004318b0f09da71d48fc5e8a2789ab7"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/industries/technology",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/industries/technology",
+      "id": "e164d22b46abf8612d9f8ce81a87bb92b7c899c9"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/organizations",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/organizations",
+      "id": "2b71722913e641c71c771a1817e82e2ddfe38a5d"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/organizations/growth-tech",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/organizations/growth-tech",
+      "id": "841c80f407773b3e462c3cee93d04fa0d1f5ebda"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/organizations/leadership-advice-for-family-enterprises",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/organizations/leadership-advice-for-family-enterprises",
+      "id": "02132112d2639cb1a4e8226d2223ce90579f0836"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/organizations/private-capital",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/organizations/private-capital",
+      "id": "da60d976e581f4dcb345c178c649caae3183b745"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/expertise/organizations/social-impact",
+      "source": "CRAWL",
+      "targetPath": "/en/expertise/organizations/social-impact",
+      "id": "90b4f4e9a9dbbae182464ea63931a4421c7cefd4"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights",
+      "source": "CRAWL",
+      "targetPath": "/en/insights",
+      "id": "6b72d712ac599673dce5937cace02164a01f6901"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights?insightTopicTags=8e73303fcef74105a349291d06552bc3",
+      "source": "CRAWL",
+      "targetPath": "/en/insights",
+      "id": "59f61dd338b807906da229846cd63c673fa284cc"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights?insightTopicTags=9d3d74a536f84bd5853c013d1c3dd26e",
+      "source": "CRAWL",
+      "targetPath": "/en/insights",
+      "id": "3eca0eaa5e46ffbee1ef565eb626715715ffe70d"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/artificial-intelligence-and-leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/artificial-intelligence-and-leadership",
+      "id": "d4cf8cf8b78ead5f3a244a0a8c21a9e7b3d51a58"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/board-leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/board-leadership",
+      "id": "83600a52619ee9a16f8d1a3c796c5c0cbbe3ad65"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/books",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/books",
+      "id": "cdd633b22f558e999b1b73ca5bce0a9e94996349"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/books/the-new-ceo",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/books/the-new-ceo",
+      "id": "86099c768cb0ec0bfd13f6861eeb413e03e953f2"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/data-and-indices",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/data-and-indices",
+      "id": "09a6205383a369b8f46383b4ce4da8f73a00705c"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/divides-and-dividends",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/divides-and-dividends",
+      "id": "1d660a2e78e85663138bafc02f2de8e16d4e688b"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/events",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/events",
+      "id": "8dd07d5821bb166320884746415cc85890e323f9"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/events-and-podcasts",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/events-and-podcasts",
+      "id": "d60b4b262b38ef16900363b7ae741dc6e93fb868"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/family-enterprise-leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/family-enterprise-leadership",
+      "id": "9d6bef8014173a652a617561d5d3f474a8a565f4"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/flagship-research",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/flagship-research",
+      "id": "4d010aae0a24ff2ecb5146a261eb6012ce11c683"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/leadership-labs",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/leadership-labs",
+      "id": "89af8312828cab592bf2b26fc73e8d2bf75bef92"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/leadership-labs/ai-leadership-100-percent-human",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/leadership-labs/ai-leadership-100-percent-human",
+      "id": "43f8a7975902074c04b4f4b53d726467844f58ca"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/leadership-labs/leadership-analytics-predictors-of-ceo-success",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/leadership-labs/leadership-analytics-predictors-of-ceo-success",
+      "id": "1aaf85fd14bcadfd298dc7ded0a2e6f8536a0f67"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/leadership-topics-and-trends",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/leadership-topics-and-trends",
+      "id": "f321cbb8f4a59a9b48cfb723a22106c1d3a68b25"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/podcasts/leadership-lounge",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/podcasts/leadership-lounge",
+      "id": "cb5dc0aaa7029db617a24978762cbfac8c6ad794"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/podcasts/redefiners",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/podcasts/redefiners",
+      "id": "0f464b28e4dd83db0f9848a0998d259ad8d81ec2"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/2024-global-corporate-governance-trends",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/2024-global-corporate-governance-trends",
+      "id": "3b1c0c2f755f956bba47644f9fc88c68c378cb2f"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-ceo-turnover-index",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/global-ceo-turnover-index",
+      "id": "d7eaaf88e0dc29324b049fd4a6c1493bee2ca69f"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-cfo-turnover-index",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/global-cfo-turnover-index",
+      "id": "ef22dfd75f853c2bc777ec07359a5d6344e1747d"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-chro-turnover-index",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/global-chro-turnover-index",
+      "id": "738a4fd95d67543940a49739f32143f1ee04fb85"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-coo-turnover-index",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/global-coo-turnover-index",
+      "id": "c929813bd9aa58bcf76d465eddff5271e41248a3"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-leadership-monitor",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/global-leadership-monitor",
+      "id": "f44ca37f4304e86d2e0f76a3c27d326faf44f71b"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/reports-surveys/leadership-confidence-index",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/reports-surveys/leadership-confidence-index",
+      "id": "7f9df852c8c21aaac4a2bea30bbd094f7c938811"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/sustainable-leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/sustainable-leadership",
+      "id": "5c54bafe9aeb2802331dd9c6fabe7aac51c0a226"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/technology-and-innovation",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/technology-and-innovation",
+      "id": "bc8dbe8bb16450fbf8283f9a3e8714efce975b98"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/insights/the-future-of-leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/insights/the-future-of-leadership",
+      "id": "0435a234d2b19d76c035b1d7bb6371d3560d0783"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/join-the-conversation-on-social-media",
+      "source": "CRAWL",
+      "targetPath": "/en/join-the-conversation-on-social-media",
+      "id": "aebb9faca37e244f35a06f2c7111bc961fcd713c"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/leadership-decade-action",
+      "source": "CRAWL",
+      "targetPath": "/en/leadership-decade-action",
+      "id": "e63991d5538a7334c18274ac9a4a410f50ad964f"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/locations",
+      "source": "CRAWL",
+      "targetPath": "/en/locations",
+      "id": "1ef0c05d6f6f1311dfe817bd87e2210ffc9b2886"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/media-inquiry",
+      "source": "CRAWL",
+      "targetPath": "/en/media-inquiry",
+      "id": "c0f2490b98195242007dc29ac0d57e342c2b4768"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/microsite/sustainable-leadership-lessons-of-vision-book",
+      "source": "CRAWL",
+      "targetPath": "/en/microsite/sustainable-leadership-lessons-of-vision-book",
+      "id": "967149dd929195954e6e6d05f23523ac2ff4607d"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/microsite/to-the-top-book",
+      "source": "CRAWL",
+      "targetPath": "/en/microsite/to-the-top-book",
+      "id": "ecf80cef3ec4516832b751a5ad563d73e5255f0e"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/people",
+      "source": "CRAWL",
+      "targetPath": "/en/people",
+      "id": "de95ee5f95864ca336a02a29d358b92efc58a25b"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/people/board-of-directors",
+      "source": "CRAWL",
+      "targetPath": "/en/people/board-of-directors",
+      "id": "cbc9134f28488b30df9e37bf3ecc2db834135b85"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/people/consultant-directory",
+      "source": "CRAWL",
+      "targetPath": "/en/people/consultant-directory",
+      "id": "c3dc8b5f6fc4bb6901623471ac2413fe28824c22"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/people/leadership",
+      "source": "CRAWL",
+      "targetPath": "/en/people/leadership",
+      "id": "a91aea9e72ad54d63ca8e15e867c0e566f416baa"
+    },
+    {
+      "url": "https://www.russellreynolds.com/en/subscribe-to-newsletter",
+      "source": "CRAWL",
+      "targetPath": "/en/subscribe-to-newsletter",
+      "id": "b35c0b61b561b69030bda6cb83415af79f8405b2"
+    },
+    {
+      "url": "https://www.russellreynolds.com/ja-jp/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "source": "CRAWL",
+      "targetPath": "/ja-jp/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "id": "24fe95d4a0db14a7457e08b73fa6755b6164e538"
+    },
+    {
+      "url": "https://www.russellreynolds.com/zh-cn/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "source": "CRAWL",
+      "targetPath": "/zh-cn/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "id": "d26d56a463f9f4a7beea18ed0c3553a608d6a26b"
     }
   ],
   "crawlOptions": {
@@ -366,34 +624,5 @@
       "CRAWL"
     ]
   },
-  "extractionErrors": [
-    {
-      "url": "https://www.valvolineglobal.com/",
-      "status": "302 Found Redirect: https://www.valvolineglobal.com/en/"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/site.webmanifest",
-      "status": "content type is not text/html"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/PassionOne-Regular.woff2",
-      "status": "content type is not text/html"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/PassionOne-Bold.woff2",
-      "status": "content type is not text/html"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Regular.woff2",
-      "status": "content type is not text/html"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Bold.woff2",
-      "status": "content type is not text/html"
-    },
-    {
-      "url": "https://www.valvolineglobal.com/Static/vcom/dist/fonts/Barlow-Medium.woff2",
-      "status": "content type is not text/html"
-    }
-  ]
+  "extractionErrors": []
 }
