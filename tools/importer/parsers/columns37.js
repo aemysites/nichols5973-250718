@@ -1,36 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  const headerRow = ['Columns (columns37)'];
-  // Find the slideshow container
+  // Find the slideshow container within the block
   const slideshow = element.querySelector('.slideshow-container');
   if (!slideshow) return;
-  // Find all .mySlides
+
+  // Gather all slides
   const slides = Array.from(slideshow.querySelectorAll('.mySlides'));
-  const rows = [headerRow];
+
+  // Construct header row
+  const headerRow = ['Columns (columns37)'];
+  const tableRows = [headerRow];
+
+  // For each slide, find the table > tr > tds (columns)
   slides.forEach((slide) => {
-    // Each slide contains a table with two <td>s which are the columns
+    // Only consider slides with an internal table structure
     const table = slide.querySelector('table');
-    if (!table) return;
-    const tr = table.querySelector('tr');
-    if (!tr) return;
-    const tds = Array.from(tr.querySelectorAll('td'));
-    // Defensive: ensure we have at least one column
-    if (tds.length === 0) return;
-    // For each column, collect its children (excluding whitespace-only <p>&nbsp;>)
-    const cells = tds.map(td => {
-      const content = Array.from(td.childNodes).filter(node => {
-        if (node.nodeType === 3) return node.textContent.trim() !== '';
-        if (
-          node.nodeType === 1 && node.tagName === 'P' && node.innerHTML.trim() === '&nbsp;'
-        ) return false;
-        return true;
-      });
-      // If only one node, return the node itself; otherwise, an array
-      return content.length === 1 ? content[0] : content;
-    });
-    rows.push(cells);
+    if (table) {
+      const tr = table.querySelector('tr');
+      if (tr) {
+        // Get all TDs (columns)
+        const tds = Array.from(tr.querySelectorAll('td'));
+        // For each td, wrap its content in a div (to preserve block structure)
+        const cells = tds.map((td) => {
+          const div = document.createElement('div');
+          while (td.firstChild) {
+            div.appendChild(td.firstChild);
+          }
+          return div;
+        });
+        // Only push if there is content (avoid empty rows)
+        if (cells.length > 0) {
+          tableRows.push(cells);
+        }
+      }
+    }
   });
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
+
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(tableRows, document);
+
+  // Replace the original element with the block table
   element.replaceWith(block);
 }

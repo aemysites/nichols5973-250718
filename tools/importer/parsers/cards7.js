@@ -1,48 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // EXACT header per example
-  const headerRow = ['Cards (cards7)'];
-  const cells = [headerRow];
+  // Header row as specified in the example
+  const cells = [['Cards (cards7)']];
 
-  // Find card row(s): in given HTML, cards are inside .entry-points__row
-  const cardRows = element.querySelectorAll('.entry-points__row');
-  cardRows.forEach(row => {
-    // Each card is a .entry-point__item (which is an <a>)
+  // Find all the entry-points__row blocks within the element
+  const rows = element.querySelectorAll('.entry-points__row');
+  rows.forEach(row => {
+    // Each card is an <a> with .entry-point__item
     const cards = row.querySelectorAll('.entry-point__item');
     cards.forEach(card => {
-      // Image: first img in .entry-point__item--img
-      const imgWrapper = card.querySelector('.entry-point__item--img');
-      const img = imgWrapper ? imgWrapper.querySelector('img') : null;
-
-      // Text: all content inside .entry-point__item--body (preserving structure)
+      // First cell: the image from the card
+      let img = null;
+      const imgContainer = card.querySelector('.entry-point__item--img');
+      if (imgContainer) {
+        img = imgContainer.querySelector('img');
+      }
+      // Second cell: all content (headings, paragraphs, etc.) from the card's body, preserving structure and order
       const body = card.querySelector('.entry-point__item--body');
-      let textContent;
+      const bodyContent = [];
       if (body) {
-        // Gather all body children (including text nodes)
-        // This is robust against missing/extra elements
-        textContent = [];
         body.childNodes.forEach(node => {
+          // Only include non-empty text nodes/elements
           if (node.nodeType === Node.ELEMENT_NODE) {
-            textContent.push(node);
-          } else if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-            // For non-empty text nodes, wrap in <span> to preserve text
-            const span = document.createElement('span');
-            span.textContent = node.textContent.trim();
-            textContent.push(span);
+            if (node.textContent.trim()) {
+              bodyContent.push(node);
+            }
+          } else if (node.nodeType === Node.TEXT_NODE) {
+            if (node.textContent.trim()) {
+              const span = document.createElement('span');
+              span.textContent = node.textContent.trim();
+              bodyContent.push(span);
+            }
           }
         });
-        // If only one element, use that element directly
-        if (textContent.length === 1) textContent = textContent[0];
-      } else {
-        textContent = '';
       }
-
-      // Add table row: two columns (image, text)
-      cells.push([img || '', textContent]);
+      // Add the card only if both image and bodyContent have valid content
+      if (img && bodyContent.length) {
+        cells.push([img, bodyContent]);
+      }
     });
   });
-
-  // Create table and replace original element
+  // Build and replace the block in the DOM
   const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

@@ -1,43 +1,32 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to get background image url if present
-  function getBackgroundImageUrl(el) {
-    const style = el.getAttribute('style') || '';
-    const match = style.match(/background-image:\s*url\(([^)]+)\)/i);
-    if (match && match[1]) {
-      return match[1].replace(/^['"]|['"]$/g, '');
-    }
-    return null;
-  }
-  // Get background image as <img> element if present
-  const bgUrl = getBackgroundImageUrl(element);
-  let bgImgElem = null;
-  if (bgUrl) {
-    bgImgElem = document.createElement('img');
-    bgImgElem.src = bgUrl;
-    bgImgElem.setAttribute('loading', 'lazy');
-    bgImgElem.alt = '';
+  // Table header as in the example
+  const headerRow = ['Hero (hero4)'];
+
+  // Extract background image from style="background-image: url( ... )"
+  let backgroundCell = '';
+  const styleAttr = element.getAttribute('style') || '';
+  const bgMatch = styleAttr.match(/background-image:\s*url\(([^)]+)\)/i);
+  if (bgMatch && bgMatch[1]) {
+    const img = document.createElement('img');
+    img.src = bgMatch[1].replace(/['"]/g, '');
+    backgroundCell = img;
   }
 
-  // Find content container (usually .layout-container)
-  const contentContainer = element.querySelector(':scope > .layout-container') || element;
-  // Filter child nodes to ignore empty <p> and whitespace
-  const children = Array.from(contentContainer.childNodes).filter(node => {
-    // Remove empty text nodes
-    if (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) return false;
-    // Remove <p> tags with only whitespace
-    if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'P' && !node.textContent.trim()) return false;
-    return true;
-  });
+  // Find the layout container, which holds all the content
+  const layoutContainer = element.querySelector(':scope > .layout-container');
+  let contentCell = '';
+  if (layoutContainer) {
+    // Reference the entire block of content for robustness
+    contentCell = layoutContainer;
+  }
 
-  // Block table construction
-  const tableRows = [
-    ['Hero (hero4)'],
-    [bgImgElem || ''], // second row: background image, empty string if none
-    [children] // third row: all meaningful content nodes in one cell
+  // Compose the table as per instructions: 1 col, 3 rows
+  const cells = [
+    headerRow,
+    [backgroundCell],
+    [contentCell]
   ];
-  const table = WebImporter.DOMUtils.createTable(tableRows, document);
-
-  // Replace original element with block table
+  const table = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(table);
 }

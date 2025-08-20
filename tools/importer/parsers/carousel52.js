@@ -1,77 +1,67 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract background-image url from style string
-  function extractBgUrl(style) {
-    if (!style) return null;
-    const match = style.match(/background-image:\s*url\(["']?([^"')]+)["']?\)/i);
+  // Helper: Extract image URL from style attribute like: background-image: url("...")
+  function extractImageUrl(style) {
+    const match = /background-image:\s*url\(["']?([^"')]+)["']?\)/.exec(style || '');
     return match ? match[1] : null;
   }
 
-  // Find all tab panes (each is a slide)
+  // Get all tab panes (one per slide)
   const tabContent = element.querySelector('.home-tabs-content');
   if (!tabContent) return;
-  const tabPanes = Array.from(tabContent.querySelectorAll('.w-tab-pane'));
+  const tabPanes = tabContent.querySelectorAll(':scope > .w-tab-pane');
 
-  // Prepare table rows
   const rows = [];
-  // Header, block name EXACTLY as in example
+  // Header row
   rows.push(['Carousel (carousel52)']);
 
   tabPanes.forEach((pane) => {
-    // Each pane has .slider-base (may have collection-item as well)
-    let slider = pane.querySelector('.slider-base');
-    if (!slider) return;
-
+    // Each pane has .slider-base or similar
+    const slide = pane.querySelector('.slider-base');
+    if (!slide) return;
+    // Get text content container
+    const slideText = slide.querySelector('.home-slide-text');
     // Get background image URL
-    const bgDiv = slider.querySelector('.home-slider-background');
-    let imgUrl = null;
+    const bgDiv = slide.querySelector('.home-slider-background');
+    let imgUrl = '';
     if (bgDiv) {
-      imgUrl = extractBgUrl(bgDiv.getAttribute('style') || '');
+      imgUrl = extractImageUrl(bgDiv.getAttribute('style'));
     }
-
-    // Create image element (mandatory)
+    // Create image element if we have a URL
     let imgEl = null;
     if (imgUrl) {
       imgEl = document.createElement('img');
       imgEl.src = imgUrl;
-      imgEl.setAttribute('loading', 'lazy');
-    } else {
-      imgEl = document.createTextNode('');
+      imgEl.loading = 'lazy';
+      imgEl.alt = '';
+      imgEl.style.maxWidth = '100%';
+      imgEl.style.height = 'auto';
     }
-
-    // Gather text content using existing elements
-    const textDiv = slider.querySelector('.home-slide-text');
-    let textCellContent = [];
-    if (textDiv) {
-      // Title (optional, styled as a heading)
-      const heading = textDiv.querySelector('.home-slider-heading');
+    
+    // TEXT CELL: Use direct references to original elements if possible
+    const cellContent = [];
+    if (slideText) {
+      // .intro-text, .home-slider-heading, .description-text, .home-slider-button
+      const intro = slideText.querySelector('.intro-text');
+      if (intro) cellContent.push(intro);
+      const heading = slideText.querySelector('.home-slider-heading');
       if (heading) {
-        // Use <h2> as in example
-        const h = document.createElement('h2');
-        h.innerHTML = heading.innerHTML;
-        textCellContent.push(h);
+        // Wrap in <h2> to maintain heading semantics
+        const h2 = document.createElement('h2');
+        h2.textContent = heading.textContent;
+        cellContent.push(h2);
       }
-      // Description (optional)
-      const desc = textDiv.querySelector('.description-text');
-      if (desc) {
-        const p = document.createElement('p');
-        p.innerHTML = desc.innerHTML;
-        textCellContent.push(p);
-      }
-      // Call to action (optional)
-      const cta = textDiv.querySelector('a.home-slider-button');
-      if (cta) {
-        textCellContent.push(cta); // Reference existing CTA element
-      }
+      const desc = slideText.querySelector('.description-text');
+      if (desc) cellContent.push(desc);
+      const cta = slideText.querySelector('.home-slider-button');
+      if (cta) cellContent.push(cta);
     }
-    if (textCellContent.length === 1) textCellContent = textCellContent[0];
-    if (textCellContent.length === 0) textCellContent = '';
-
-    // Add slide row: [image, text content]
-    rows.push([imgEl, textCellContent]);
+    rows.push([
+      imgEl,
+      cellContent.length > 0 ? cellContent : ''
+    ]);
   });
 
-  // Create the block table
   const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

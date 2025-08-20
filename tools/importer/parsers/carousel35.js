@@ -1,43 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Find the actual slides UL
-  const slidesTrack = element.querySelector('.podcast-carousel--carousel .glide__track > ul.glide__slides');
-  if (!slidesTrack) return;
+  // Table header
+  const rows = [['Carousel (carousel35)']];
 
-  // Get all non-clone LI slides
-  const slides = Array.from(slidesTrack.children)
-    .filter(li => li.tagName === 'LI' && !li.classList.contains('glide__slide--clone'));
-  if (slides.length === 0) return;
+  // Find the <ul> containing the slides
+  const ul = element.querySelector('.glide__slides');
+  if (!ul) return;
 
-  // Block header row (must match example exactly)
-  const cells = [['Carousel (carousel35)']];
+  // Get all direct li children (slides)
+  const slides = Array.from(ul.children).filter(li => li.classList.contains('podcast-carousel'));
 
   slides.forEach(slide => {
-    // 1st cell: Image from background-image style
-    let img = null;
-    const bgStyle = slide.getAttribute('style') || '';
-    const bgMatch = bgStyle.match(/background-image:\s*url\(["']?([^"')]+)["']?\)/);
-    if (bgMatch) {
-      img = document.createElement('img');
-      img.src = bgMatch[1];
-      img.alt = '';
+    // --- IMAGE CELL ---
+    // Get the background image from style
+    let imgUrl = '';
+    const style = slide.getAttribute('style') || '';
+    const match = style.match(/background-image:\s*url\(["']?(.*?)["']?\)/i);
+    if (match && match[1]) {
+      imgUrl = match[1];
+    }
+    let imgEl = null;
+    if (imgUrl) {
+      imgEl = document.createElement('img');
+      imgEl.src = imgUrl;
+      imgEl.alt = '';
     }
 
-    // 2nd cell: All text content in the slide, robustly
-    // We reference the .podcast-carousel--content directly for all text and markup
-    const podcastContent = slide.querySelector('.podcast-carousel--content');
-    // Reference the original node (not a clone)
-    let textContentArr = [];
-    if (podcastContent) {
-      textContentArr.push(podcastContent);
-    } else {
-      textContentArr.push('');
+    // --- TEXT CELL ---
+    // Reference the .podcast-carousel--content block for all text content
+    const content = slide.querySelector('.podcast-carousel--content');
+    let textCellContent = '';
+    if (content) {
+      textCellContent = content;
     }
-    // Add row: always 2 columns per spec
-    cells.push([img || '', textContentArr]);
+
+    rows.push([
+      imgEl,
+      textCellContent
+    ]);
   });
 
-  // Create the table and replace the original element
-  const blockTable = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(blockTable);
+  // Create the table and replace original element
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }

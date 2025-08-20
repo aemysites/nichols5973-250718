@@ -1,57 +1,54 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper: extract background image url from style attribute
-  function getBackgroundImageUrl(el) {
-    const style = el.getAttribute('style') || '';
-    const match = style.match(/background-image:\s*url\(([^)]*)\)/i);
-    return match ? match[1].replace(/['"]/g, '') : null;
-  }
-
-  // Header row
+  // Header row: block name, exactly as in the example
   const headerRow = ['Hero (hero56)'];
 
-  // Background image row
-  const bgUrl = getBackgroundImageUrl(element);
-  let bgImgEl = null;
-  if (bgUrl) {
-    bgImgEl = document.createElement('img');
-    bgImgEl.src = bgUrl;
-    bgImgEl.alt = '';
+  // Row 2: Background image (optional)
+  let bgImageUrl = null;
+  const styleAttr = element.getAttribute('style') || '';
+  const bgImgMatch = styleAttr.match(/background-image:\s*url\(([^)]+)\)/i);
+  if (bgImgMatch) {
+    // Strip quotes if present
+    bgImageUrl = bgImgMatch[1].replace(/^['"]|['"]$/g, '');
   }
-  const bgRow = [bgImgEl ? bgImgEl : ''];
+  let bgImageEl = null;
+  if (bgImageUrl) {
+    bgImageEl = document.createElement('img');
+    bgImageEl.src = bgImageUrl;
+    bgImageEl.alt = '';
+  }
+  const backgroundRow = [bgImageEl ? bgImageEl : ''];
 
-  // Content row: get main inner content block
-  // Find the div.layout-container
+  // Row 3: Content
+  // Find the table > td > all content
   let contentCell = '';
-  const layout = Array.from(element.children).find(child => child.classList && child.classList.contains('layout-container'));
+  const layout = element.querySelector('.layout-container');
   if (layout) {
-    // Find the table within layout
     const table = layout.querySelector('table');
     if (table) {
       const td = table.querySelector('td');
       if (td) {
-        // Use all childNodes of td (including text, elements, keep structure)
-        // Remove empty text nodes only
-        const nodes = Array.from(td.childNodes).filter(
-          node => !(node.nodeType === Node.TEXT_NODE && !node.textContent.trim())
-        );
-        contentCell = nodes.length > 1 ? nodes : (nodes[0] || '');
+        // Get all child nodes of td (including text, elements, lists, etc.)
+        // Remove empty text nodes
+        const nodes = Array.from(td.childNodes).filter(n => {
+          return !(n.nodeType === Node.TEXT_NODE && n.textContent.trim() === '');
+        });
+        if (nodes.length) {
+          contentCell = nodes;
+        }
       }
     }
   }
-  if (!contentCell) {
-    contentCell = '';
-  }
   const contentRow = [contentCell];
 
-  // Compose rows
+  // Build the table for the block
   const cells = [
     headerRow,
-    bgRow,
+    backgroundRow,
     contentRow
   ];
-
-  // Create and insert the table block
   const block = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace the original element with the block table
   element.replaceWith(block);
 }
