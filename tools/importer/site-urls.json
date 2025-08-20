@@ -1,7 +1,7 @@
 {
   "originUrl": "https://www.russellreynolds.com",
   "aborted": false,
-  "lastCrawled": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+  "lastCrawled": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/board-search",
   "urls": [
     {
       "url": "https://www.russellreynolds.com/en/",
@@ -598,16 +598,16 @@
       "id": "b35c0b61b561b69030bda6cb83415af79f8405b2"
     },
     {
-      "url": "https://www.russellreynolds.com/ja-jp/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "url": "https://www.russellreynolds.com/ja-jp/capabilities/how-do-i-find-the-best-leaders/board-search",
       "source": "CRAWL",
-      "targetPath": "/ja-jp/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
-      "id": "24fe95d4a0db14a7457e08b73fa6755b6164e538"
+      "targetPath": "/ja-jp/capabilities/how-do-i-find-the-best-leaders/board-search",
+      "id": "888a8bce68fee5d94891b86fae9da5933e00a23a"
     },
     {
-      "url": "https://www.russellreynolds.com/zh-cn/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
+      "url": "https://www.russellreynolds.com/zh-cn/capabilities/how-do-i-find-the-best-leaders/board-search",
       "source": "CRAWL",
-      "targetPath": "/zh-cn/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
-      "id": "d26d56a463f9f4a7beea18ed0c3553a608d6a26b"
+      "targetPath": "/zh-cn/capabilities/how-do-i-find-the-best-leaders/board-search",
+      "id": "7874fd681de65b76180f53f7633ae5949c053d26"
     }
   ],
   "crawlOptions": {
