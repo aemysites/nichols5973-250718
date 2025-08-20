@@ -1,56 +1,45 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row as per requirements
+  // Block header row as required by the spec
   const headerRow = ['Accordion (accordion82)'];
-  // Get all accordion items (direct children)
-  const items = Array.from(element.querySelectorAll(':scope > .acc-container > .acc-item'));
-  const rows = [];
+  const rows = [headerRow];
 
-  items.forEach(item => {
-    // Title: always from .header--main inside .acc-tab
-    const tab = item.querySelector('.acc-tab');
-    let titleNode = null;
+  // Get all direct accordion items
+  const accItems = element.querySelectorAll(':scope > .acc-container > .acc-item');
+
+  accItems.forEach(accItem => {
+    // Get the title cell
+    let titleCell = '';
+    const tab = accItem.querySelector(':scope > .acc-tab');
     if (tab) {
-      titleNode = tab.querySelector('.header--main');
+      const header = tab.querySelector(':scope > .header--main');
+      if (header) titleCell = header;
     }
-    if (!titleNode) return;
 
-    // Content: everything inside .acc-pane (may contain several .acc-pane-content and/or ul)
-    const pane = item.querySelector('.acc-pane');
-    let contentNodes = [];
+    // Get the content cell
+    let contentCell = '';
+    const pane = accItem.querySelector(':scope > .acc-pane');
     if (pane) {
-      // All children of acc-pane, not just content blocks, ensure all relevant content is captured
-      const children = Array.from(pane.children);
-      children.forEach(child => {
-        if (child.classList.contains('acc-pane-content')) {
-          // include all child nodes of acc-pane-content (text, elements, etc)
-          // Don't lose whitespace nodes, but skip empty text
-          contentNodes.push(...Array.from(child.childNodes).filter(node => {
-            return node.nodeType === 1 || (node.nodeType === 3 && node.textContent.trim());
-          }));
-        } else if (child.classList.contains('accordion-list-wrap')) {
-          // include the whole ul
-          contentNodes.push(child);
-        } else {
-          // fallback: include the node if not empty
-          if (child.childNodes.length > 0 || (child.textContent && child.textContent.trim())) {
-            contentNodes.push(child);
-          }
+      // Only grab visible contents (those under .acc-pane-content and lists)
+      // This makes the cell more robust to variation
+      const contents = [];
+      // .acc-pane-content blocks
+      pane.querySelectorAll(':scope > .acc-pane-content').forEach(c => contents.push(c));
+      // any ul.accordion-list-wrap directly under pane
+      pane.querySelectorAll(':scope > ul.accordion-list-wrap').forEach(c => contents.push(c));
+      // Handle the case where pane might also have content nodes directly (e.g., text nodes, divs)
+      Array.from(pane.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+          contents.push(document.createTextNode(node.textContent));
         }
       });
+      if (contents.length === 1) contentCell = contents[0];
+      else if (contents.length > 1) contentCell = contents;
+      else contentCell = '';
     }
-    // If contentNodes is empty, provide empty string (edge case)
-    const contentCell = contentNodes.length === 0 ? '' : (contentNodes.length === 1 ? contentNodes[0] : contentNodes);
-    rows.push([
-      titleNode,
-      contentCell
-    ]);
+    rows.push([titleCell, contentCell]);
   });
 
-  // Create and replace
-  const table = WebImporter.DOMUtils.createTable([
-    headerRow,
-    ...rows
-  ], document);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

@@ -1,49 +1,60 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Extract carousel slides from the track
-  const track = element.querySelector('.glide__track ul.glide__slides');
-  if (!track) return;
-  const slides = Array.from(track.children).filter(li => li.classList.contains('feature-carousel'));
-
-  // Deduplicate slides by image URL
+  // Find the slides list
+  const slidesUl = element.querySelector('.glide__slides');
+  if (!slidesUl) return;
+  // Only feature slides (ignore clones with duplicate images)
+  const lis = Array.from(slidesUl.children).filter(li => li.classList.contains('feature-carousel'));
+  // Deduplicate by background image URL
   const seen = new Set();
-  const rows = [];
-  for (const slide of slides) {
-    const style = slide.getAttribute('style') || '';
-    // Extract background-image url
-    const urlMatch = style.match(/background-image:\s*url\(["']?([^"')]+)["']?\)/);
-    if (!urlMatch) continue;
-    const imgUrl = urlMatch[1];
-    if (seen.has(imgUrl)) continue;
-    seen.add(imgUrl);
-    // Create image element
-    const img = document.createElement('img');
-    img.src = imgUrl;
-    img.alt = '';
-    img.loading = 'lazy';
-    // Extract the most inclusive text content block
-    let textElement = slide.querySelector('.feature-carousel--txt');
-    if (!textElement) {
-      // fallback: select the .feature-carousel--content if --txt is missing
-      textElement = slide.querySelector('.feature-carousel--content');
+  const slides = [];
+  lis.forEach(li => {
+    const bgImg = li.style.backgroundImage;
+    const urlMatch = bgImg && bgImg.match(/url\(["']?(.*?)["']?\)/);
+    const url = urlMatch ? urlMatch[1] : '';
+    if (!url || seen.has(url)) return;
+    seen.add(url);
+    slides.push({ li, url });
+  });
+  // Build table rows
+  const headerRow = ['Carousel (carousel6)']; // Exact header from example
+  const rows = [headerRow];
+  slides.forEach(({ li, url }) => {
+    // Image cell: always present
+    let img = null;
+    for (const node of li.childNodes) {
+      // background image only, never an actual <img>
+      // create <img> for table
+      break;
     }
-    // Place all children (including text nodes) into a fragment
+    img = document.createElement('img');
+    img.src = url;
+    img.alt = '';
+    img.setAttribute('loading', 'lazy');
+    // Text cell: gather all text content from .feature-carousel--content (preserves all markup)
     let textCell = '';
-    if (textElement) {
-      const fragment = document.createDocumentFragment();
-      // We want to reference existing elements, so we move them
-      while (textElement.childNodes.length > 0) {
-        fragment.appendChild(textElement.childNodes[0]);
+    const contentDiv = li.querySelector('.feature-carousel--content');
+    if (contentDiv) {
+      // Move all children from .feature-carousel--txt if present, else from contentDiv itself
+      let txt = contentDiv.querySelector('.feature-carousel--txt');
+      const wrapper = document.createElement('div');
+      if (txt) {
+        // Move all children (reference, not clone)
+        while (txt.childNodes.length) {
+          wrapper.appendChild(txt.childNodes[0]);
+        }
+      } else {
+        // If no .feature-carousel--txt, move all children from contentDiv
+        while (contentDiv.childNodes.length) {
+          wrapper.appendChild(contentDiv.childNodes[0]);
+        }
       }
-      // If fragment is not empty, use its children as array for table cell
-      textCell = fragment.childNodes.length ? Array.from(fragment.childNodes) : '';
+      // Only add if wrapper has actual content
+      if (wrapper.textContent.trim()) textCell = wrapper;
     }
     rows.push([img, textCell]);
-  }
-  // Build table: header and rows
-  const cells = [['Carousel (carousel6)']];
-  rows.forEach(r => cells.push(r));
-  // Create the table and replace the original element
-  const table = WebImporter.DOMUtils.createTable(cells, document);
+  });
+  // Create table and replace original element
+  const table = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(table);
 }

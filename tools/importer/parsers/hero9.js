@@ -1,44 +1,53 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Prepare the table header
-  const headerRow = ['Hero (hero9)'];
-
-  // --- Extract Image (row 2) ---
-  let imageEl = null;
-  // Find the first image in the .cta-spotlight-img > div > img structure
-  const imgContainer = element.querySelector('.cta-spotlight-img');
-  if (imgContainer) {
-    // Allow for cases where the image is directly or nested inside a div
-    imageEl = imgContainer.querySelector('img');
-  } else {
-    // Fallback: any image inside the element
-    imageEl = element.querySelector('img');
+  // Helper to get immediate child by class
+  function getChildByClass(parent, className) {
+    return Array.from(parent.children).find(el => el.classList.contains(className));
   }
-  const imageRow = [imageEl ? imageEl : ''];
 
-  // --- Extract Text and CTA (row 3) ---
-  const textCell = [];
-  // All text is inside .cta-spotlight-txt
-  const txtContainer = element.querySelector('.cta-spotlight-txt');
-  if (txtContainer) {
-    // Retain all children (h2, h3, etc.) as-is for semantic preservation
-    Array.from(txtContainer.children).forEach(child => {
-      // Only push non-empty content
-      if (child.textContent && child.textContent.trim()) {
-        textCell.push(child);
+  // Find the main content wrapper
+  const layout = element.querySelector('.layout-container');
+  const wrapper = layout ? layout.querySelector('.cta-spotlight-wrapper') : null;
+
+  // Prepare image row
+  let imgElem = null;
+  if (wrapper) {
+    const imgContainer = getChildByClass(wrapper, 'cta-spotlight-img');
+    if (imgContainer) {
+      // Find image inside the deepest div
+      const img = imgContainer.querySelector('img');
+      if (img) {
+        imgElem = img;
       }
-    });
+    }
   }
-  // The CTA (button) is in .cta-spotlight-button
-  const btnContainer = element.querySelector('.cta-spotlight-button');
-  if (btnContainer) {
-    const btn = btnContainer.querySelector('a');
-    if (btn) textCell.push(btn);
-  }
-  const textRow = [textCell.length > 0 ? textCell : ''];
 
-  // --- Compose table ---
-  const cells = [headerRow, imageRow, textRow];
-  const table = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(table);
+  // Prepare content row
+  let contentArr = [];
+  if (wrapper) {
+    const txtContainer = getChildByClass(wrapper, 'cta-spotlight-txt');
+    if (txtContainer) {
+      const txtChildren = Array.from(txtContainer.children);
+      if (txtChildren.length > 0) {
+        contentArr = contentArr.concat(txtChildren);
+      }
+    }
+    const buttonContainer = getChildByClass(wrapper, 'cta-spotlight-button');
+    if (buttonContainer) {
+      const link = buttonContainer.querySelector('a');
+      if (link) {
+        contentArr.push(link);
+      }
+    }
+  }
+
+  // Build table rows
+  const cells = [
+    ['Hero (hero9)'],
+    [imgElem ? imgElem : ''],
+    [contentArr.length ? contentArr : '']
+  ];
+
+  const blockTable = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(blockTable);
 }

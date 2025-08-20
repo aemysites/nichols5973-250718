@@ -1,86 +1,98 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Carousel block header (exact match)
-  const headerRow = ['Carousel (carousel1)'];
-
-  // Get video poster URL -- for main image
-  const videoDiv = element.querySelector('._6q-back-video');
-  let posterImg = null;
-  if (videoDiv && videoDiv.dataset.posterUrl) {
-    posterImg = document.createElement('img');
-    posterImg.src = videoDiv.dataset.posterUrl;
-    posterImg.alt = '';
-    posterImg.loading = 'lazy';
-    posterImg.width = 750;
-    posterImg.height = 584;
+  // Helper to create a poster <img> from a URL
+  function createPosterImg(url) {
+    const img = document.createElement('img');
+    img.src = url;
+    img.loading = 'lazy';
+    img.alt = '';
+    return img;
   }
 
-  // Gather slide containers (order preserved)
-  const slideSelectors = '._6q-slider > ._6q-slide-cont, ._6q-slider > ._6q-slide-cont-last';
-  const slideDivs = Array.from(element.querySelectorAll(slideSelectors));
-
-  const rows = [];
-  // Track first slide (use poster image)
-  let isFirstSlide = true;
-  for (const slide of slideDivs) {
-    let imgCell = '';
-    if (isFirstSlide && posterImg) {
-      imgCell = posterImg;
-    } // For other slides, no image (per provided HTML)
-    // Build text cell content
-    const content = [];
-    // First slide: heading
-    const titleFirst = slide.querySelector('._6q-slider-title');
-    if (titleFirst) {
-      const heading = document.createElement('h2');
-      heading.innerHTML = titleFirst.innerHTML;
-      content.push(heading);
+  // Try to find the poster image for the carousel (from video bg)
+  let posterUrl = '';
+  const videoBg = element.querySelector('._6q-back-video');
+  if (videoBg) {
+    posterUrl = videoBg.getAttribute('data-poster-url') || '';
+    if (!posterUrl) {
+      const video = videoBg.querySelector('video');
+      if (video && video.style && video.style.backgroundImage) {
+        const urlMatch = video.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+        if (urlMatch) posterUrl = urlMatch[1];
+      }
     }
-    // Data slide: left value and right text
-    const leftData = slide.querySelector('._6q-slider-data');
-    if (leftData) {
-      const leftVal = document.createElement('h2');
-      leftVal.innerHTML = leftData.innerHTML;
-      content.push(leftVal);
-    }
-    const rightText = slide.querySelector('._6q-right-text');
-    if (rightText) {
-      const desc = document.createElement('p');
-      desc.innerHTML = rightText.innerHTML;
-      content.push(desc);
-    }
-    // Source link (e.g. "Source: ...")
-    const subSource = slide.querySelector('._6q-sub-source');
-    if (subSource) {
-      content.push(subSource);
-    }
-    // Last slide CTA: heading, subtext, buttons
-    const lastHeading = slide.querySelector('._6q-slider-heading');
-    if (lastHeading) {
-      const heading = document.createElement('h2');
-      heading.innerHTML = lastHeading.innerHTML;
-      content.push(heading);
-    }
-    const lastSubText = slide.querySelector('._6q-sub-text');
-    if (lastSubText) {
-      const subtext = document.createElement('p');
-      subtext.innerHTML = lastSubText.innerHTML;
-      content.push(subtext);
-    }
-    const ctaButtons = slide.querySelector('._6q-buttons-container');
-    if (ctaButtons) {
-      content.push(ctaButtons);
-    }
-    // Compose cell: if only one element, use it; else use array
-    const textCell = content.length === 1 ? content[0] : (content.length ? content : '');
-    rows.push([imgCell, textCell]);
-    isFirstSlide = false;
   }
 
-  // Compose table cells
-  const cells = [headerRow, ...rows];
+  // Prepare rows: header first
+  const rows = [['Carousel (carousel1)']];
 
-  // Create the block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
+  // All slides (ignore the first intro slide, which only has _6q-fixed-text-block-first)
+  const slides = Array.from(element.querySelectorAll('._6q-slide-cont, ._6q-slide-cont-last'))
+    .filter(slide => !slide.querySelector('._6q-fixed-text-block-first'));
+
+  slides.forEach(slide => {
+    // Left column: always the poster image
+    let imgCell;
+    if (posterUrl) {
+      imgCell = createPosterImg(posterUrl);
+    } else {
+      // fallback: empty element
+      imgCell = document.createElement('div');
+      imgCell.textContent = '';
+    }
+
+    // Right column: content
+    let contentCell = document.createElement('div');
+    // Stat slide
+    const statBlock = slide.querySelector('._6q-fixed-text-block');
+    // Last slide (CTA, headline, subtext)
+    const statBlockLast = slide.querySelector('._6q-fixed-text-block-last');
+
+    if (statBlock) {
+      // Stat number
+      const statNum = statBlock.querySelector('._6q-slider-data');
+      if (statNum) {
+        const h = document.createElement('h2');
+        h.textContent = statNum.textContent.trim();
+        contentCell.appendChild(h);
+      }
+      // Main text
+      const mainText = statBlock.querySelector('._6q-right-text');
+      if (mainText) {
+        const p = document.createElement('p');
+        p.textContent = mainText.textContent.trim();
+        contentCell.appendChild(p);
+      }
+      // Source (may contain a link)
+      const source = statBlock.querySelector('._6q-sub-source');
+      if (source) {
+        contentCell.appendChild(source);
+      }
+    } else if (statBlockLast) {
+      // Heading
+      const heading = statBlockLast.querySelector('._6q-slider-heading');
+      if (heading) {
+        const h1 = document.createElement('h1');
+        h1.textContent = heading.textContent.trim();
+        contentCell.appendChild(h1);
+      }
+      // Subtext
+      const subText = statBlockLast.querySelector('._6q-sub-text');
+      if (subText) {
+        const p = document.createElement('p');
+        p.textContent = subText.textContent.trim();
+        contentCell.appendChild(p);
+      }
+      // CTAs/buttons
+      const btns = Array.from(slide.querySelectorAll('._6q-cta-button, ._6q-replay-button'));
+      btns.forEach(btn => {
+        contentCell.appendChild(btn);
+      });
+    }
+    rows.push([imgCell, contentCell]);
+  });
+
+  // Create and replace the block
+  const block = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(block);
 }

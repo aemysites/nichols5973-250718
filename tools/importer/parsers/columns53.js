@@ -1,42 +1,56 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Table header matches example
+  // Define header row exactly as required
   const headerRow = ['Columns (columns53)'];
-  
-  // 2. Two columns: Left (title + tags), Right (type, authors, date)
-  // Reference original elements from the document, do not clone
+
+  // We'll create two columns: left (title + tags), right (meta/info)
 
   // LEFT COLUMN
   const titleContainer = element.querySelector('.article-heading--title-container');
-  const leftCol = document.createElement('div');
+  const leftColumnEls = [];
+
+  // Title (h1)
   if (titleContainer) {
-    // Title (h1)
     const title = titleContainer.querySelector('.article-heading--title');
-    if (title) leftCol.appendChild(title);
-    // Tags (all .tag links)
-    const tags = titleContainer.querySelector('.article-heading--tags-in-title');
-    if (tags) leftCol.appendChild(tags);
+    if (title) leftColumnEls.push(title);
+
+    // Tags as list of links
+    const tags = titleContainer.querySelector('.heading-tags-mobile.article-heading--tags-in-title');
+    if (tags && tags.children.length > 0) {
+      const tagList = document.createElement('ul');
+      Array.from(tags.children).forEach(tagEl => {
+        const li = document.createElement('li');
+        li.appendChild(tagEl); // Reference existing <a> elements
+        tagList.appendChild(li);
+      });
+      leftColumnEls.push(tagList);
+    }
   }
 
   // RIGHT COLUMN
-  const info = element.querySelector('.article-heading--info');
-  const rightCol = document.createElement('div');
-  if (info) {
-    // Each child div: .type, .authors, .date
-    Array.from(info.children).forEach(child => {
-      rightCol.appendChild(child);
-    });
+  const infoContainer = element.querySelector('.article-heading--info');
+  const rightColumnEls = [];
+
+  if (infoContainer) {
+    // Type (img + span)
+    const typeDiv = infoContainer.querySelector('.type');
+    if (typeDiv) rightColumnEls.push(typeDiv);
+
+    // Authors image(s)
+    const authorsDiv = infoContainer.querySelector('.authors');
+    if (authorsDiv && authorsDiv.children.length > 0) {
+      rightColumnEls.push(authorsDiv);
+    }
+
+    // Date and time
+    const dateDiv = infoContainer.querySelector('.date');
+    if (dateDiv) rightColumnEls.push(dateDiv);
   }
 
-  // 3. Cells structure: two columns only
-  const cells = [
-    headerRow,
-    [leftCol, rightCol]
-  ];
+  // Compose table row: always 2 columns as visually suggested
+  const blockRows = [headerRow, [leftColumnEls, rightColumnEls]];
 
-  // 4. No Section Metadata table, as none is present in the example
-
-  // 5. Create and replace
-  const block = WebImporter.DOMUtils.createTable(cells, document);
+  // Create and replace
+  const block = WebImporter.DOMUtils.createTable(blockRows, document);
   element.replaceWith(block);
 }

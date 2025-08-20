@@ -1,48 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Table header: Must match example exactly
+  // Table header as in the example
   const headerRow = ['Cards (cards22)'];
-
-  // Find consultants container
-  const consultantsSection = element.querySelector('.consultant-directory--consultants');
-  if (!consultantsSection) return;
-
-  // Find all consultant elements
-  const consultantEls = Array.from(consultantsSection.querySelectorAll('.consultant'));
   const rows = [headerRow];
 
-  consultantEls.forEach((consultant) => {
-    const link = consultant.querySelector('a');
-    if (!link) return;
-    // Image: Use existing img element
-    const imgDiv = link.querySelector('.image');
-    const img = imgDiv ? imgDiv.querySelector('img') : null;
+  // Find the consultant cards container
+  const consultantsSection = element.querySelector('.consultant-directory--consultants');
+  if (consultantsSection) {
+    const consultantEls = consultantsSection.querySelectorAll('.consultant');
+    consultantEls.forEach(consultantEl => {
+      // First cell: reference the <img> element (if present)
+      let img = consultantEl.querySelector('.image img');
 
-    // Compose card text: Name (bold), ALL location text (comma separated)
-    // Also: retain semantic meaning, use only existing elements, no markdown
-    const nameEl = link.querySelector('.name');
-    const nameText = nameEl ? nameEl.textContent.trim() : '';
-    const titleEl = document.createElement('strong');
-    titleEl.textContent = nameText;
+      // Second cell: name (bold/strong) and all text content from .location-wrapper
+      const cellFragment = document.createDocumentFragment();
+      // Name, always present
+      const name = consultantEl.querySelector('.name');
+      if (name) {
+        const strong = document.createElement('strong');
+        strong.textContent = name.textContent.trim();
+        cellFragment.appendChild(strong);
+      }
+      // All locations (may be multiple <span>)
+      const locations = consultantEl.querySelectorAll('.location-wrapper .location span');
+      if (locations.length > 0) {
+        const locDiv = document.createElement('div');
+        locations.forEach((loc, i) => {
+          if (i > 0) locDiv.appendChild(document.createElement('br'));
+          locDiv.appendChild(document.createTextNode(loc.textContent.trim()));
+        });
+        cellFragment.appendChild(locDiv);
+      }
+      // Add row to table
+      rows.push([img, cellFragment]);
+    });
+  }
 
-    // Get all location text
-    const locationWrapper = link.querySelector('.location-wrapper');
-    let locationText = '';
-    if (locationWrapper) {
-      // Collect all .location span text (can be >1 span)
-      const locationSpans = locationWrapper.querySelectorAll('.location span');
-      locationText = Array.from(locationSpans).map(span => span.textContent.trim()).join(', ');
-    }
-    // Build text cell: title (bold), then location(s) (plain text)
-    const cellContent = [];
-    if (nameText) cellContent.push(titleEl);
-    if (locationText) cellContent.push(document.createElement('br'), document.createTextNode(locationText));
-    // If no name or location, skip row
-    if (!img && cellContent.length === 0) return;
-    rows.push([img, cellContent]);
-  });
-
-  // Create the cards table, replace element
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  // Only replace if we actually have cards
+  if (rows.length > 1) {
+    const table = WebImporter.DOMUtils.createTable(rows, document);
+    element.replaceWith(table);
+  }
 }

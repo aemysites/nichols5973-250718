@@ -1,47 +1,48 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Get the main content/columns
-  const content = element.querySelector('.header-podcast--content');
+  // Header row: must be a single cell
+  const headerRow = ['Columns (columns36)'];
+
+  // Find left and right column content
+  const podcastContent = element.querySelector('.header-podcast--content');
   const imageContainer = element.querySelector('.image-container');
 
-  // LEFT COLUMN: podcast info
-  const leftColumn = [];
-  // Extract heading
-  const h1 = content.querySelector('h1');
-  if (h1) leftColumn.push(h1);
-  // Extract podcast block (iframe)
-  const iframe = content.querySelector('iframe');
-  if (iframe) {
-    const a = document.createElement('a');
-    a.href = iframe.src;
-    a.textContent = iframe.title || 'Podcast link';
-    leftColumn.push(a);
+  // Left column
+  const leftCol = [];
+  if (podcastContent) {
+    const h1 = podcastContent.querySelector('h1');
+    if (h1) leftCol.push(h1);
+    const iframe = podcastContent.querySelector('iframe');
+    if (iframe && iframe.src) {
+      const link = document.createElement('a');
+      link.href = iframe.src;
+      link.textContent = iframe.title || 'Listen';
+      link.target = '_blank';
+      leftCol.push(link);
+    }
+    const subtitle = podcastContent.querySelector('.subtitle');
+    if (subtitle) leftCol.push(subtitle);
+    const hoster = podcastContent.querySelector('.header-podcast--hoster');
+    if (hoster) leftCol.push(hoster);
   }
-  // Extract subtitle (Podcast label)
-  const subtitle = content.querySelector('.subtitle');
-  if (subtitle) leftColumn.push(subtitle);
-  // Hosted by section
-  const hoster = content.querySelector('.header-podcast--hoster');
-  if (hoster) leftColumn.push(hoster);
-  // (category is empty in source)
 
-  // RIGHT COLUMN: image and description
-  const rightColumn = [];
-  // Prefer desktop image, fallback to any img
-  let img = imageContainer.querySelector('.image-container__image--desktop img');
-  if (!img) img = imageContainer.querySelector('img');
-  if (img) rightColumn.push(img);
-  // Image description (title and text)
-  const imageDesc = imageContainer.querySelector('.image-desc');
-  if (imageDesc) rightColumn.push(imageDesc);
+  // Right column
+  const rightCol = [];
+  if (imageContainer) {
+    let img = imageContainer.querySelector('.image-container__image--desktop img');
+    if (!img) {
+      img = imageContainer.querySelector('.image-container__image--mobile img');
+    }
+    if (img) rightCol.push(img);
+    const imageDesc = imageContainer.querySelector('.image-desc');
+    if (imageDesc) rightCol.push(imageDesc);
+  }
 
-  // Table header row matches the example: "Columns (columns36)"
-  const cells = [
-    ['Columns (columns36)'],
-    [leftColumn, rightColumn]
-  ];
+  // Build content row: 2 columns
+  const contentRow = [leftCol, rightCol];
 
-  // Create and replace
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-  element.replaceWith(block);
+  // Compose cells array so header is a single cell
+  const cells = [headerRow, contentRow];
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(table);
 }

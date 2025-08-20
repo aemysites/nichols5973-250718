@@ -1,43 +1,63 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Header row -- matches example exactly
-  const headerRow = ['Hero (hero55)'];
-
-  // Second row: background image (from style)
-  let bgImgElem = null;
-  const styleAttr = element.getAttribute('style') || '';
-  const bgMatch = styleAttr.match(/background-image:\s*url\(([^)]+)\)/);
-  if (bgMatch && bgMatch[1]) {
-    bgImgElem = document.createElement('img');
-    bgImgElem.src = bgMatch[1].replace(/['"]/g, '');
-    bgImgElem.alt = '';
+  // Get background image from style attribute
+  let bgImageUrl = '';
+  if (element.hasAttribute('style')) {
+    const style = element.getAttribute('style');
+    const match = style.match(/background-image:\s*url\(([^)]+)\)/i);
+    if (match && match[1]) {
+      bgImageUrl = match[1].replace(/['"]/g, '');
+    }
   }
-  const bgImgRow = [bgImgElem ? bgImgElem : ''];
 
-  // Third row: all content in the visible block (preserve order and semantics)
-  let contentCell = [];
+  // Find the main content cell
+  let contentCell = null;
   const layoutContainer = element.querySelector('.layout-container');
   if (layoutContainer) {
-    // Find table -- but preserve all content in its cell
     const table = layoutContainer.querySelector('table');
     if (table) {
       const td = table.querySelector('td');
       if (td) {
-        // Reference ALL child nodes (elements and text nodes with visible content)
-        contentCell = Array.from(td.childNodes).filter(node => {
-          // Element nodes
-          if (node.nodeType === 1) return true;
-          // Text nodes (avoid whitespace-only)
-          if (node.nodeType === 3 && node.textContent.trim()) return true;
-          return false;
-        });
+        contentCell = td;
       }
     }
   }
-  // Structure: always an array in the cell (even if empty)
-  const contentRow = [contentCell];
 
-  // Compose table: 1 column x 3 rows
+  // Build the table rows
+  const headerRow = ['Hero (hero55)'];
+
+  // Row 2: background image (if present)
+  let bgImgRow = [''];
+  if (bgImageUrl) {
+    const img = document.createElement('img');
+    img.src = bgImageUrl;
+    img.alt = '';
+    bgImgRow = [img];
+  }
+
+  // Row 3: cell containing all significant existing elements from the contentCell
+  // We'll skip empty <p> and whitespace-only nodes
+  const contentElements = [];
+  if (contentCell) {
+    Array.from(contentCell.childNodes).forEach(node => {
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        // skip empty <p> and <strong>&nbsp;</strong> or similar empties
+        if (node.tagName === 'P' && node.innerHTML.replace(/\s|&nbsp;/g, '') === '' && node.querySelectorAll('img').length === 0) {
+          return;
+        }
+        contentElements.push(node);
+      } else if (node.nodeType === Node.TEXT_NODE) {
+        if (node.textContent.trim() !== '') {
+          const span = document.createElement('span');
+          span.textContent = node.textContent;
+          contentElements.push(span);
+        }
+      }
+    });
+  }
+  const contentRow = [contentElements];
+
+  // Assemble the block
   const cells = [headerRow, bgImgRow, contentRow];
   const block = WebImporter.DOMUtils.createTable(cells, document);
   element.replaceWith(block);

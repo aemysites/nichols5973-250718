@@ -1,56 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // 1. Table header matches the example exactly
+  // Table header as shown in the example
   const headerRow = ['Cards (cards86)'];
+  const rows = [headerRow];
 
-  // 2. Find all card rows in the provided HTML
-  const cardRows = [];
-  // Select all .entry-points__row (each contains multiple cards)
-  const rows = element.querySelectorAll('.entry-points__row');
-  rows.forEach(row => {
-    // Each .entry-point__item is a card
-    const cards = row.querySelectorAll('.entry-point__item');
-    cards.forEach(card => {
-      // First column: Image (reference existing <img>)
-      const imgContainer = card.querySelector('.entry-point__item--img');
-      let image = '';
-      if (imgContainer) {
-        const img = imgContainer.querySelector('img');
-        if (img) image = img;
-      }
+  // Find the <ul> containing the cards
+  const ul = element.querySelector('ul');
+  if (!ul) return;
 
-      // Second column: Text content
-      const body = card.querySelector('.entry-point__item--body');
-      const contents = [];
-      if (body) {
-        // Title (strong, matches example's bold heading)
-        const h3 = body.querySelector('h3');
-        if (h3) {
-          const strong = document.createElement('strong');
-          strong.textContent = h3.textContent;
-          contents.push(strong);
-        }
-        // Description: <p>
-        const p = body.querySelector('p');
-        if (p) {
-          // Add a <br> if there's a title, for spacing like markdown example
-          if (h3) contents.push(document.createElement('br'));
-          contents.push(p);
-        }
-        // No visible CTA in this HTML, so do not add extra link
+  // Each <li> is a card
+  const cards = ul.querySelectorAll('li');
+
+  cards.forEach(card => {
+    // First cell: image element from the .related-consultants-list--picture div
+    const imgDiv = card.querySelector('.related-consultants-list--picture');
+    let img = '';
+    if (imgDiv) {
+      const foundImg = imgDiv.querySelector('img');
+      if (foundImg) img = foundImg;
+    }
+
+    // Second cell: text content (title, etc) from .related-consultants-list--info
+    const infoDiv = card.querySelector('.related-consultants-list--info');
+    let textContent = '';
+    if (infoDiv) {
+      // Prefer to use the existing heading element, if present
+      const h4 = infoDiv.querySelector('h4');
+      if (h4) {
+        textContent = h4;
+      } else {
+        // Fallback: use all child nodes as content
+        textContent = Array.from(infoDiv.childNodes).filter(n => n.textContent.trim()).map(n => n);
       }
-      // Handle missing image/text gracefully (edge case)
-      cardRows.push([
-        image || '',
-        contents.length ? contents : ''
-      ]);
-    });
+    }
+
+    rows.push([
+      img,
+      textContent
+    ]);
   });
 
-  // 3. Assemble table as per block guidelines
-  const tableData = [headerRow, ...cardRows];
-  const blockTable = WebImporter.DOMUtils.createTable(tableData, document);
-
-  // 4. Replace the original element
-  element.replaceWith(blockTable);
+  // Create and replace with the structured block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(block);
 }
