@@ -1,474 +1,402 @@
 {
   "templates": [
     {
-      "name": "'business website template'",
+      "name": "'business directory'",
       "cluster": 1,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-leadership-monitor",
-          "uuid": "f44ca37f4304e86d2e0f76a3c27d326faf44f71b"
+          "url": "https://www.vioc.com/differential-services/",
+          "uuid": "d526d87efd7032a9c12810e9ce8b16f128d01233"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-cfo-turnover-index",
-          "uuid": "ef22dfd75f853c2bc777ec07359a5d6344e1747d"
+          "url": "https://www.vioc.com/air-conditioning/",
+          "uuid": "44cc09c87e9b8e6e330a845edda6dcda957a5e14"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-coo-turnover-index",
-          "uuid": "c929813bd9aa58bcf76d465eddff5271e41248a3"
+          "url": "https://www.vioc.com/battery-services/",
+          "uuid": "cb0fddcc20a0d89c586e1282cc0fca20b277f3c0"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-ceo-turnover-index",
-          "uuid": "d7eaaf88e0dc29324b049fd4a6c1493bee2ca69f"
+          "url": "https://www.vioc.com/contact-us/",
+          "uuid": "a0796070f75f7fd79b87624cfd63984b4ec29dfc"
         },
         {
-          "url": "https://www.russellreynolds.com/en/people/consultant-directory",
-          "uuid": "c3dc8b5f6fc4bb6901623471ac2413fe28824c22"
+          "url": "https://www.vioc.com/air-filters/",
+          "uuid": "a5638d96ac322faa9912b55f96816dbff8f97c1c"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/global-chro-turnover-index",
-          "uuid": "738a4fd95d67543940a49739f32143f1ee04fb85"
+          "url": "https://www.vioc.com/wiper-blade-replacement/",
+          "uuid": "901fd0ed149da38515d6630f209d9dadeb9ff644"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/podcasts/leadership-lounge",
-          "uuid": "cb5dc0aaa7029db617a24978762cbfac8c6ad794"
+          "url": "https://www.vioc.com/radiator-service/",
+          "uuid": "1fe39bae2c354189dd5b9c4a16b1f2abd268720b"
         },
         {
-          "url": "https://www.russellreynolds.com/en/",
-          "uuid": "140b91a74b7ce6366bfdea4297b260c18d02bea3"
+          "url": "https://www.vioc.com/transmission-service/",
+          "uuid": "460b8916e785bbc811a5512d4ef45c0f27ad2db7"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/events",
-          "uuid": "8dd07d5821bb166320884746415cc85890e323f9"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights?insightTopicTags=8e73303fcef74105a349291d06552bc3",
-          "uuid": "59f61dd338b807906da229846cd63c673fa284cc"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/who-we-are/sustainability",
-          "uuid": "3b3ecd921974836716825f2247d8c3b1ac6ee521"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights",
-          "uuid": "6b72d712ac599673dce5937cace02164a01f6901"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/leadership-confidence-index",
-          "uuid": "7f9df852c8c21aaac4a2bea30bbd094f7c938811"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/newsroom",
-          "uuid": "f9b24416de6ced79f0bcb84712bbe82f8f4f3515"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights?insightTopicTags=9d3d74a536f84bd5853c013d1c3dd26e",
-          "uuid": "3eca0eaa5e46ffbee1ef565eb626715715ffe70d"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/podcasts/redefiners",
-          "uuid": "0f464b28e4dd83db0f9848a0998d259ad8d81ec2"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/transformational-leadership-study",
-          "uuid": "5c974e59eb5e5432bfcdda15d570fbcc7b71803f"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/technology-and-innovation",
-          "uuid": "bc8dbe8bb16450fbf8283f9a3e8714efce975b98"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/people/leadership",
-          "uuid": "a91aea9e72ad54d63ca8e15e867c0e566f416baa"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/sustainable-leadership",
-          "uuid": "5c54bafe9aeb2802331dd9c6fabe7aac51c0a226"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/board-leadership",
-          "uuid": "83600a52619ee9a16f8d1a3c796c5c0cbbe3ad65"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/who-we-are/responsible-ai-principles",
-          "uuid": "48ec87a5280bd82329789649cbfec01e4f368d88"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/artificial-intelligence-and-leadership",
-          "uuid": "d4cf8cf8b78ead5f3a244a0a8c21a9e7b3d51a58"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/reports-surveys/2024-global-corporate-governance-trends",
-          "uuid": "3b1c0c2f755f956bba47644f9fc88c68c378cb2f"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/leadership-decade-action",
-          "uuid": "e63991d5538a7334c18274ac9a4a410f50ad964f"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/data-and-indices",
-          "uuid": "09a6205383a369b8f46383b4ce4da8f73a00705c"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/who-we-are/history",
-          "uuid": "3ef7a667bb2b9be01d495be810823b7d67605ecf"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/books",
-          "uuid": "cdd633b22f558e999b1b73ca5bce0a9e94996349"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/flagship-research",
-          "uuid": "4d010aae0a24ff2ecb5146a261eb6012ce11c683"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/events-and-podcasts",
-          "uuid": "d60b4b262b38ef16900363b7ae741dc6e93fb868"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/leadership-labs/ai-leadership-100-percent-human",
-          "uuid": "43f8a7975902074c04b4f4b53d726467844f58ca"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/leadership-labs/leadership-analytics-predictors-of-ceo-success",
-          "uuid": "1aaf85fd14bcadfd298dc7ded0a2e6f8536a0f67"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/microsite/to-the-top-book",
-          "uuid": "ecf80cef3ec4516832b751a5ad563d73e5255f0e"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/microsite/sustainable-leadership-lessons-of-vision-book",
-          "uuid": "967149dd929195954e6e6d05f23523ac2ff4607d"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/the-future-of-leadership",
-          "uuid": "0435a234d2b19d76c035b1d7bb6371d3560d0783"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/family-enterprise-leadership",
-          "uuid": "9d6bef8014173a652a617561d5d3f474a8a565f4"
+          "url": "https://www.vioc.com/light-bulb-services/",
+          "uuid": "869628c3044545b17047398c3952082d9cd9f31b"
         }
       ]
     },
     {
-      "name": "'Corporate Website Template'",
+      "name": "'Automotive Services Website'",
       "cluster": 2,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/ceo-succession",
-          "uuid": "d28b76832b2e219aa8fad93dc2a6963c1d299614"
+          "url": "https://www.vioc.com/oil-change/",
+          "uuid": "85413170235d5cfa9c0f90a38b2dd93eb6eb404f"
         },
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/board-succession",
-          "uuid": "620948be1d596bb5db173d36e7d6bb74067c8ba3"
+          "url": "https://www.vioc.com/road-ready/",
+          "uuid": "5875fb1dd2252b1e866d2e615a42fda33cfbc084"
         },
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success/board-composition",
-          "uuid": "b2f1b9f4f087fea715ba6c645ec343adc6a9ce03"
+          "url": "https://www.vioc.com/fuel-system-cleaning/",
+          "uuid": "81edfd032088f1e1aae2237893b0e1652707ab2c"
         },
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success/board-effectiveness",
-          "uuid": "58a6b6f8c80ff95f6bf47644bcd6818688cb37c4"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession/c-suite-succession",
-          "uuid": "290afd7139512a4c1c01a3df48d9aa27a352705a"
+          "url": "https://www.vioc.com/tire-rotation/",
+          "uuid": "408afd1d946fe9c16ccdbad7b3dfba64e5e566ff"
         }
       ]
     },
     {
-      "name": "'Corporate website template'",
+      "name": "'Service Overview Page'",
       "cluster": 3,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/ja-jp/capabilities/how-do-i-find-the-best-leaders/board-search",
-          "uuid": "888a8bce68fee5d94891b86fae9da5933e00a23a"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/ceo-search",
-          "uuid": "be07fec12be804a0d89db9718f3988cdfa176d8f"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/board-search",
-          "uuid": "09fdb5f4ebb36ffbcb73da922af28349df328af8"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders/executive-search",
-          "uuid": "3fb48e4c959582eeefad58caa275793fc7b31598"
+          "url": "https://www.vioc.com/fleet-services/fleet/",
+          "uuid": "e7ce6202c1a29f952a63e730d306ba2ba69ff118"
         }
       ]
     },
     {
-      "name": "'Business Website Template'",
+      "name": "Service Listing",
       "cluster": 4,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/expertise/organizations/leadership-advice-for-family-enterprises",
-          "uuid": "02132112d2639cb1a4e8226d2223ce90579f0836"
+          "url": "https://www.vioc.com/faq/headlight-taillight-replacement-service-length/",
+          "uuid": "049e7116a6445f0747b40aeac8164459230af643"
         },
         {
-          "url": "https://www.russellreynolds.com/en/expertise/organizations/social-impact",
-          "uuid": "90b4f4e9a9dbbae182464ea63931a4421c7cefd4"
+          "url": "https://www.vioc.com/faq/oil-change-price/",
+          "uuid": "77e7c44f84507e3e99d8b950dbada945da71123a"
         },
         {
-          "url": "https://www.russellreynolds.com/en/expertise/organizations/growth-tech",
-          "uuid": "841c80f407773b3e462c3cee93d04fa0d1f5ebda"
+          "url": "https://www.vioc.com/faq/headlight-replacement-near-me/",
+          "uuid": "a41aef383a5105d097b52a47b28cc0089cc46566"
         },
         {
-          "url": "https://www.russellreynolds.com/en/expertise/organizations/private-capital",
-          "uuid": "da60d976e581f4dcb345c178c649caae3183b745"
+          "url": "https://www.vioc.com/faq/can-i-get-a-ticket-for-broken-headlights-or-taillights/",
+          "uuid": "456892efc8e3271d6cc9912e5b70378ca2a93520"
+        },
+        {
+          "url": "https://www.vioc.com/faq/is-the-battery-core-included/",
+          "uuid": "6b8ecd88823c04115ee39be16c99baf86dc363fe"
+        },
+        {
+          "url": "https://www.vioc.com/faq/hose-replacements/",
+          "uuid": "354ab25533beedca1032945c08210113b2930fd4"
+        },
+        {
+          "url": "https://www.vioc.com/faq/coolant-compatibility/",
+          "uuid": "bf9c39652479a90e263c88d8025682fb97b33df2"
+        },
+        {
+          "url": "https://www.vioc.com/faq/can-you-check-the-level-of-the-fluid/",
+          "uuid": "41c0452f9c106689d110b1d1217854c008b2b837"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-does-differential-service-take/",
+          "uuid": "5288787cc8009d8e5a2b633625406a5bb49b1230"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-does-fuel-system-service-take/",
+          "uuid": "8a4af3e81eb04aa0bfd602d433e978fe0d0b0789"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-does-it-take-to-replace-wiper-blades/",
+          "uuid": "6788b40f82b5afaee95ba3db0810672201c96bc3"
+        },
+        {
+          "url": "https://www.vioc.com/faq/high-intensity-discharge-hid-lights/",
+          "uuid": "cc6cbeb8897291cf69cca6147cac58d75ae697e8"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-do-wiper-blades-last/",
+          "uuid": "a7fe58f9432c458d4c153182f7d8154d3996177f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/valvoline-transmission-service/",
+          "uuid": "c668fd6be516885a77b7cfbb75256c8a5b42f472"
+        },
+        {
+          "url": "https://www.vioc.com/faq/air-conditioning-service-length/",
+          "uuid": "f3096a12091c82894accba8eb898d133029cc244"
+        },
+        {
+          "url": "https://www.vioc.com/faq/air-filter-replacement-service-length/",
+          "uuid": "bb28653b75db0b1782586dd5567d09a42cc7a2fa"
+        },
+        {
+          "url": "https://www.vioc.com/faq/do-you-sell-tires/",
+          "uuid": "de433aa7f3b44e6bbe2ac576f542bdfb47226138"
+        },
+        {
+          "url": "https://www.vioc.com/faq/do-you-sell-vehicle-batteries/",
+          "uuid": "6fa5a63af7a6799f1b728b34311a566bf3654edd"
+        },
+        {
+          "url": "https://www.vioc.com/faq/does-the-store-have-a-waiting-room/",
+          "uuid": "38808d4b501cf5d924288c97a9461e89410b4680"
+        },
+        {
+          "url": "https://www.vioc.com/faq/car-battery-replacement-service/",
+          "uuid": "e7a1c835a7e08c5cb2109a149b470382a3ee25f9"
+        },
+        {
+          "url": "https://www.vioc.com/faq/car-battery-types/",
+          "uuid": "b3a7f6115b83456675cdfc4b8df6c3135ac1e4b4"
+        },
+        {
+          "url": "https://www.vioc.com/faq/differential-service-near-me/",
+          "uuid": "6cd880ce25b60ce126249201513d05333e5ae2c8"
+        },
+        {
+          "url": "https://www.vioc.com/faq/ac-valves-purpose-replacement/",
+          "uuid": "3eb0465d704bc048ce2005a307e29d2d70d0e92f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/best-car-battery/",
+          "uuid": "9e9b42304f08b80a46686dd95bda66f6c69d1b04"
+        },
+        {
+          "url": "https://www.vioc.com/faq/best-truck-battery/",
+          "uuid": "f82511157d4ab7b01cb8382e3ff50464560165d5"
+        },
+        {
+          "url": "https://www.vioc.com/faq/can-i-come-to-get-fluids-topped-off/",
+          "uuid": "d1105b40be1a2d546bb2a20ab95790e1d14338d5"
+        },
+        {
+          "url": "https://www.vioc.com/faq/battery-terminal-corrosion-cleaning/",
+          "uuid": "b3bc690b9aff84e21f1d65b143b5c3aff844e6dc"
+        },
+        {
+          "url": "https://www.vioc.com/faq/car-air-filter-replacement-near-me/",
+          "uuid": "1a7a96abf094e6ebb1280480da0fe41047cfe521"
+        },
+        {
+          "url": "https://www.vioc.com/faq/can-i-stay-in-my-vehicle/",
+          "uuid": "11a0543cffe65f45c9ee11197e773b0a95c3315c"
+        },
+        {
+          "url": "https://www.vioc.com/faq/purpose-of-car-ac-valve/",
+          "uuid": "6c19d3d1d5dceb78db7967db17812db518ed78fd"
+        },
+        {
+          "url": "https://www.vioc.com/faq/radiator-and-cooling-system-flush-near-me/",
+          "uuid": "b44c69a695e9aea3f2eeb33d548f6391ddbf1795"
+        },
+        {
+          "url": "https://www.vioc.com/faq/radiator-service-flush-or-drain/",
+          "uuid": "e541f5df0c43f2b81f1bd82c8ae6477a33acb011"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-does-it-take-to-replace-a-car-battery/",
+          "uuid": "ef96e8610ed8cb05ca634a2cd0fbf4966bd051fd"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-should-car-battery-last/",
+          "uuid": "6f1d04801f3c4c764a10a1b0a41955a312611e83"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-often-do-i-need-differential-service/",
+          "uuid": "5025f10d27a1d1ab1dbc850b5350adfbca9ed61e"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-often-should-i-change-my-air-filter/",
+          "uuid": "6b966aa3e8a10bcf2808daa8278acda1b61e883a"
+        },
+        {
+          "url": "https://www.vioc.com/faq/inspection-services-at-Valvoline/",
+          "uuid": "254d0ca4ff7c5b729d0fc151c2628bca31d218ad"
+        },
+        {
+          "url": "https://www.vioc.com/faq/is-there-a-valvoline-warranty-for-car-air-conditioning-service/",
+          "uuid": "a3f53a71cfcbd5f80499a18ec1bc403578b8985f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/oil-change-service-length/",
+          "uuid": "7958f69ec71da140ae37c9ac801a74bac76e4b75"
+        },
+        {
+          "url": "https://www.vioc.com/faq/oil-change-stay-in-car/",
+          "uuid": "51cbc0f724e6445f95a2905840a6530e0015a6f6"
+        },
+        {
+          "url": "https://www.vioc.com/faq/tire-rotation-near-me/",
+          "uuid": "33d097cb078bf3e8a675afa3262889b58f53928b"
+        },
+        {
+          "url": "https://www.vioc.com/faq/transmission-service-near-me/",
+          "uuid": "6527850fd06cf0a01eb965838a16b8311a157662"
+        },
+        {
+          "url": "https://www.vioc.com/faq/truck-battery-replacement-service/",
+          "uuid": "d9a7d22acd7657d9f638ab21aa1bd732ac67d3da"
+        },
+        {
+          "url": "https://www.vioc.com/faq/radiator-service-length/",
+          "uuid": "77c0ff171cd990aa9e04c718dfd482ab13be0ffa"
+        },
+        {
+          "url": "https://www.vioc.com/faq/refrigerant-for-car-ac/",
+          "uuid": "2b199975753930ca52d53ad251021eb904f37899"
+        },
+        {
+          "url": "https://www.vioc.com/faq/stay-in-car-tire-rotation/",
+          "uuid": "798e5c6b738b28275886ed096fcd54d0d9527bb2"
+        },
+        {
+          "url": "https://www.vioc.com/faq/stay-in-car-transmission-service/",
+          "uuid": "f1e735eb2c3a558ab6a17dd30b83b4757a7c0f0a"
+        },
+        {
+          "url": "https://www.vioc.com/faq/do-i-need-an-appointment/",
+          "uuid": "ec716ab9f62a6ecddb10c5e900f8d8f3dc398264"
+        },
+        {
+          "url": "https://www.vioc.com/faq/get-copy-of-my-invoice/",
+          "uuid": "a5205d1c429b180fde9b9304a6dd7443577ab737"
+        },
+        {
+          "url": "https://www.vioc.com/faq/fuel-system-service-near-me/",
+          "uuid": "00e40cfd8f2ad6a3eaa4432d7f725b7f55456bd1"
+        },
+        {
+          "url": "https://www.vioc.com/faq/how-long-does-a-tire-rotation-take/",
+          "uuid": "8f30e5df9ae83913de963dfa6320e2c7719b695f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/wiper-blade-replacement-near-me/",
+          "uuid": "a5238a9469ae55769f76e32b08d6c6e30f64fbd3"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-type-of-oil-is-available/",
+          "uuid": "479645d48826e87485432a33c64ea96f951d943f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-type-of-oil-does-my-car-need/",
+          "uuid": "0b1c551a7cc9034d0cbf942a7aa044123be7e23b"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-are-your-prices-for-services/",
+          "uuid": "cecf2b7b711aeca3230a531fb03a56e0fbd9e4bd"
+        },
+        {
+          "url": "https://www.vioc.com/faq/valvoline-oil-change-near-me/",
+          "uuid": "e4d41c19bb04785c867244f0f941b93502c77948"
+        },
+        {
+          "url": "https://www.vioc.com/faq/valvoline-transmission-service-length/",
+          "uuid": "18dabc5661d6e20dd4863d07eb7c31e6f3cb0395"
+        },
+        {
+          "url": "https://www.vioc.com/faq/valvoline-tire-rotation-service/",
+          "uuid": "0bf009d25c87f7fe43b428b8ad4c4dbf1f39bce2"
+        },
+        {
+          "url": "https://www.vioc.com/faq/taillight-replacement-near-me/",
+          "uuid": "21825c16891b804d503b185fa8f272f2d87723da"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-does-cleaning-fuel-injectors-do/",
+          "uuid": "6983ae9414da8b386108b9f3f18e6027f9b71a6f"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-does-tire-rotation-service-do/",
+          "uuid": "1e96b88dd1df9d9c7202543ff7188c5a83208d43"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-is-differential-fluid/",
+          "uuid": "bceae89b9c47b56326d21ae21992de93974b758e"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-is-coolant-flush/",
+          "uuid": "8007532f23410e2fbec1972754922f8cef52363d"
+        },
+        {
+          "url": "https://www.vioc.com/faq/what-does-radiator-service-do/",
+          "uuid": "f0d976afda1a8253f4d0a1537c6e493b6c043615"
         }
       ]
     },
     {
-      "name": "'Portfolio Showcase'",
+      "name": "'location detail page'",
       "cluster": 5,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/insights/books/the-new-ceo/workbook",
-          "uuid": "5455f457bccd5a2b29a83192a01c32ee9e8cae76"
+          "url": "https://www.vioc.com/faq/what-is-included-in-safety-inspection/",
+          "uuid": "1220ff2c4c7e912aa86b18d62c92a507826ec969"
         },
         {
-          "url": "https://www.russellreynolds.com/en/insights/books/the-new-ceo",
-          "uuid": "86099c768cb0ec0bfd13f6861eeb413e03e953f2"
+          "url": "https://www.vioc.com/faq/what-is-included-in-an-oil-change/",
+          "uuid": "9594ff08a27de026c4110130d200ff778fb30e3c"
         }
       ]
     },
     {
-      "name": "'Service listing'",
+      "name": "'corporate webpage'",
       "cluster": 6,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/insights/divides-and-dividends",
-          "uuid": "1d660a2e78e85663138bafc02f2de8e16d4e688b"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/leadership-topics-and-trends",
-          "uuid": "f321cbb8f4a59a9b48cfb723a22106c1d3a68b25"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries",
-          "uuid": "7f3648148c716c88f6b3a3360a42683f25202150"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/careers/careers-with-our-clients",
-          "uuid": "a6665d7ff18a6da1c0d274a038472229f030bba8"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/insights/leadership-labs",
-          "uuid": "89af8312828cab592bf2b26fc73e8d2bf75bef92"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/careers/careers-at-rra",
-          "uuid": "868ffc267b9ac5e990cf435241ee8388148a0f73"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions",
-          "uuid": "954549d7819d6095f85408379facd835a7855ae6"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/who-we-are",
-          "uuid": "dbadd9575b845430468db52b6c89d37e698e80f8"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/locations",
-          "uuid": "1ef0c05d6f6f1311dfe817bd87e2210ffc9b2886"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/careers",
-          "uuid": "4c1969a601fb66ecfc10aa25fffac85d74f50735"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/people",
-          "uuid": "de95ee5f95864ca336a02a29d358b92efc58a25b"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/organizations",
-          "uuid": "2b71722913e641c71c771a1817e82e2ddfe38a5d"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/about/who-we-are/partnerships",
-          "uuid": "8db5a33c694ad394adf812293e5c733e1ba5be61"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/people/board-of-directors",
-          "uuid": "cbc9134f28488b30df9e37bf3ecc2db834135b85"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/contact-us",
-          "uuid": "35282d8d266c8c27766cf4ce609020771e00a2e3"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/access-events",
-          "uuid": "f5ed8fee58447ca931005570cd2d20a9d383ef32"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/subscribe-to-newsletter",
-          "uuid": "b35c0b61b561b69030bda6cb83415af79f8405b2"
+          "url": "https://www.vioc.com/faq/",
+          "uuid": "d0fbdf66bcd5593a262ba4449f584eae8b78c3a2"
         }
       ]
     },
     {
-      "name": "'dashboard template'",
+      "name": "'Service Information Page'",
       "cluster": 7,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/rra-artemis",
-          "uuid": "ce4c3cb02c7a3b2962209d3cf29879624010b9a6"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader/executive-mentoring",
-          "uuid": "4a5ea5d9424364f44c840ad3b9506df36f865503"
+          "url": "https://www.vioc.com/app/",
+          "uuid": "42411adeb08694139b07248585fdad3a8aa2180c"
         }
       ]
     },
     {
-      "name": "'team profile'",
+      "name": "'service booking template'",
       "cluster": 8,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/board-ceo-advisory",
-          "uuid": "64649eb343b72d1a6bc4f23a1d8ca9ea05c8263e"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/technology-data-and-digital",
-          "uuid": "c3c75cb6e5abab21302f5ed5dcb3b58a63eefd93"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/finance",
-          "uuid": "d5be0d5af0ff90bc197c97d85be09f329f6a1a74"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/corporate-affairs-and-communications",
-          "uuid": "0ae12336a4e86ac53c28c6a3aad10ebb6f58e362"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/operations-and-supply-chain",
-          "uuid": "6dcb1a707c217456bc306c93051e0be38a8a140f"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/sustainability",
-          "uuid": "64a88a0549ac2f2afafe099576b91d0390a1c5c9"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/legal-risk-and-compliance",
-          "uuid": "3348c1916cb30060db4c11ae1756c0e0a681c674"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/customer-activation-and-growth",
-          "uuid": "0fff7bc0419542d5b9e915040035f9a4c0dc1a88"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/functions/human-resources",
-          "uuid": "d68085fc5f54010b9bdf250c72c59e9229744a90"
+          "url": "https://www.vioc.com/",
+          "uuid": "466897dcecb39acee536aa5b82989f9cc84b9937"
         }
       ]
     },
     {
-      "name": "'Dashboard Template'",
+      "name": "'Directory Listing Page'",
       "cluster": 9,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-become-a-better-leader",
-          "uuid": "9ea0f0ec2b1b731a3a3560d0cbd2aa8fdfa06d3b"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-set-my-board-up-for-success",
-          "uuid": "dca213b3e2044c0d11d2c7714ef224c9ee4bed70"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-plan-for-succession",
-          "uuid": "88685272264e9bf038153754055616e8870808bc"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation",
-          "uuid": "901792e9f3ef1723c7a1669685afdf7e2a2fc5d9"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-find-the-best-leaders",
-          "uuid": "79b6a15ab0d17dc828f5346ec008be458e0e3f20"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams",
-          "uuid": "ce23a566cb307740be6436bd7bd193b1b75178d4"
+          "url": "https://www.vioc.com/services/",
+          "uuid": "b5ae9081242bddd840539d172e9de29d42e0fd45"
         }
       ]
     },
     {
-      "name": "'Corporate website template'",
+      "name": "'business homepage'",
       "cluster": 10,
       "pages": [
         {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/assessment-benchmarking",
-          "uuid": "27f66faae5c03c69591e69922877f369e54c970c"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/team-effectiveness",
-          "uuid": "68c4717aad9e25196535dd00013ea20a6442413d"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/ceo-transitions",
-          "uuid": "97e1e81437845d951ef3164ffe8aed955a37fcee"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-do-i-boost-the-performance-of-leaders-and-teams/development-and-transition",
-          "uuid": "221b0bc49bcb4f6beccc879afc4c707b1e89dd34"
-        }
-      ]
-    },
-    {
-      "name": "'Business website template'",
-      "cluster": 11,
-      "pages": [
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/inclusion-and-culture-advisory",
-          "uuid": "d88b9882646012ee60c012d1042321eb075436e6"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/sustainability",
-          "uuid": "3e2894c28a30ca8d32138da97d0c7c2eff52dc81"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/artificial-intelligence-advisory",
-          "uuid": "78909f9dd993c5f5171083538159e56370b42244"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/capabilities/how-can-i-lead-business-transformation/strategy-decode-and-activation",
-          "uuid": "8c6d6c5bdbbf23699aa4f2185c7b20633b1fcd91"
-        }
-      ]
-    },
-    {
-      "name": "'Business Portfolio'",
-      "cluster": 12,
-      "pages": [
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/education",
-          "uuid": "1e3250482cbe1a8648418b54946c304a077a1bc5"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/technology",
-          "uuid": "e164d22b46abf8612d9f8ce81a87bb92b7c899c9"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/consumer",
-          "uuid": "c0d84b9e614273e17d71ce094e5c3e84ddf4bd16"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/business-professional-services",
-          "uuid": "20f6ebe198b408c557d4f1a37ac861632331739b"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/healthcare",
-          "uuid": "1d0c8827b4ece31af26a503362f9690e3b425b8e"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/industrial-and-natural-resources",
-          "uuid": "424a327f9004318b0f09da71d48fc5e8a2789ab7"
-        },
-        {
-          "url": "https://www.russellreynolds.com/en/expertise/industries/financial-services",
-          "uuid": "99ea2c2bfefe11deea6d9c27dd7668de48beb5c0"
+          "url": "https://www.vioc.com/fleet-services/fleet-payments/",
+          "uuid": "6359c736611c1a44c10e52d61425a7ea807e1bf0"
         }
       ]
     }
